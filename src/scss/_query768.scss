@@ -1,0 +1,516 @@
+
+@media all and (max-width : 768px){
+    #home{
+        background-image: url(../img/aac93b79.jpg);
+        .left{
+            display: none;
+        }
+        .card{
+            .card__vertical{
+                height: 10vh;
+            }
+            .card--small__title{
+                width: 50vw;
+                text-align: center;
+            }
+            .card--large__title{
+                font-size: 3.5em;
+            }
+            .card__button{}
+        }
+    }
+
+    
+    .about--first{
+        height : 65vh;
+        .container--first{
+            height : 30vh;
+            .about__title--large{
+                font-size: 2em;
+            }
+        }
+        .container--second{
+            height : 35vh;
+            .second__sub-container{
+                .about__text{
+                    font-size: 2.1vw;
+                }
+                .about__svg{
+                    height: 15vw;
+                }
+            }
+        }
+    }
+
+
+    .about--second{
+        height: 100vh;
+        background-image: url(../img/5dd4bf07.jpg);
+        background-blend-mode: multiply;
+        background-color: rgba(0,0,0,.5);
+        background-position: bottom;
+        .container--second{
+            width: 70%;
+        }
+    }
+
+
+    .about--third{
+        height: 160vh;
+        @include flex(column,flex-start);
+        .third__container--first{
+            height: 70vh;
+            .third__title{
+                font-size: 2.5em;
+            }
+        }
+        .third__container--second{
+            height: 90vh;
+            @include flex(column,space-around);
+            .third__sub-container{
+                width: 90vw;
+                height: 25vh;
+                .sub-container__title{
+                    font-size: 1.1em;
+                }
+                .sub-container__text{
+                    font-size: .9em;
+                    text-align: center;
+                }
+                .graphs--container{
+                    height: 18vh;
+                    width: 80vw;
+                    .graph--container{
+                        width: 100%;
+                        .graph__title{
+                            font-size: 0.7em;
+                            height: 4vh;
+                            @include flex(column,center);
+                        }
+                        .graph{
+                            width: 80vw;
+                            .content--95{
+                                &::before{ font-size : 0.8em; }
+                            }
+                            .content--85{
+                                &::before{ font-size : 0.8em; }
+                            }
+                            .content--70{
+                                &::before{ font-size : 0.8em; }
+                            }
+                            .content--65{
+                                &::before{ font-size : 0.8em; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .services--first{
+        height: 100vh;
+        background-image: url(../img/d080caec.jpg);
+        background-size : cover;
+        @include flex(column,space-around);
+        .first__title{
+            font-size: 2.5em;
+            margin-top: 2vh;
+        }
+        .first__cards-container{
+            display: none;
+        }
+
+        .carousel__container{
+            display: block;
+            width: 80vw;
+            height: 70vh;
+            overflow: hidden;
+            position: relative;
+            .carousel__slider{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .slide{
+                    width: 100%;
+                    height: 100%;
+                    @include flex(row,center);
+                    .flip-card{
+                        width: 60vw;
+                        height: 40vh;
+                        &__content{
+                            text-align: center;
+                            position: relative;
+                            transform-style: preserve-3d;
+                            .flip-card__front{
+                                @include flip-card-sides;
+                                height: 40vh;
+                                &::before{
+                                    content:"";
+                                    position: absolute;
+                                    top:1em;
+                                    left: 1em;
+                                    right: 1em;
+                                    bottom: 1em;
+                                    border: 2px solid color(gold);
+                                    transform : translateZ(3rem);
+                                }
+                                .flip-card__title{
+                                    transform : translateZ(5rem);
+                                    font-family: $typical;
+                                    text-transform: uppercase;
+                                }
+                                .flip-card__subtitle{
+                                    transform:translateZ(3rem);
+                                    font-family: $typical;
+                                }
+                            }
+                            .flip-card__back{
+                                @include flip-card-sides;
+                                transform : rotateY(180deg);
+                                height: 40vh;
+                                .flip-card__back__content{
+                                    transform: translateZ(5rem);
+                                    font-family: $typical;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btnNext{
+               @include carouselBtn;
+               top:0;
+            }
+
+            .btnPrev{
+                @include carouselBtn; 
+                bottom : 0;
+            }
+
+            .arr{
+                height: 50px;
+            }
+        }
+    }
+
+
+    .services--second{
+        &__text{
+            width: 80vw;
+            font-size: 0.9em;
+        }
+    }
+
+
+    .services--third{
+        height: 140vh;
+        background-image : url(../img/88514661.jpg);
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+        background-color: rgba(0,0,0,.5);
+        padding: 5vh 0;
+        &__container{
+            display: none;
+        }
+        @include flex(column,space-around);
+        .main--cont{
+            width: 90vw;
+            height: 21.5vh;
+            @include flex(row,flex-start);
+            .left--cont{
+                height: 100%;
+                width: 20vw;
+                @include flex(column,space-around);
+                .pix{
+                    height: 5vh;
+                }
+                .vert{
+                    display: block;
+                    width: 1px;
+                    height: 15vh;
+                    background-color : color(gold);
+                }
+            }
+            .right--cont{
+                height: 12vh;
+                width: 60vw;
+                color : #fff;
+                @include flex(column,space-around);
+                align-items: flex-start;
+                .right--cont__title{
+                    font-family: $typical;
+                    text-transform: capitalize;
+                }
+                .right--cont__text{
+                    @include font-light;
+                }
+            }
+        }
+    }
+
+    .work--first{
+        height: 70vh;
+        .work--first__vertical{}
+        .work--first__title--small{}    
+        .work--first__title--large{
+            font-size: 2em;
+        }
+        .work--first__text{
+            font-size: .9em;
+        }
+        .work--first__list{
+            width: 65vw;
+            .work--first__item{}
+        }
+    }
+
+    .work--second{
+        height: 325vh;
+        width: 100vw;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(13,1fr);
+        grid-template-areas:
+        "Aston_Martin-DBS Audi-S4_Avant"
+        "Bentley-Flying_Spur Bentley-Flying_Spur"
+        "Bentley-Flying_Spur Bentley-Flying_Spur"
+        "Porsche-Panamera Lamborghini-Urus"
+        "Porsche-718_Spyder Porsche-718_Spyder"
+        "Porsche-718_Spyder Porsche-718_Spyder"
+        "Mercedes-Benz-GLC63_S BMW-M8_Competition_Coupe"
+        "Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe"
+        "Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe"
+        "Mercedes-Benz-CLA45_S BMW-745Le"
+        "Bentley-Continental_GT Bentley-Continental_GT"
+        "Bentley-Continental_GT Bentley-Continental_GT"
+        "Audi-TT_RS_Roadster BMW-X3_M_Competition"
+        ;
+
+
+        .work--second--1{
+            background-position: center;
+            grid-area:Aston_Martin-DBS;
+            &::before{
+                @include grid-pic-before-768;
+            }
+        }
+        .work--second--2{
+            grid-area:Audi-S4_Avant;
+            &::before{
+                @include grid-pic-before-768;
+            }
+        }
+        .work--second--3{
+            grid-area:Bentley-Flying_Spur;
+        }
+        .work--second--4{
+            grid-area:Lamborghini-Urus;
+            &::before{
+                @include grid-pic-before-768;
+            }
+        }
+        .work--second--5{
+            grid-area:Porsche-718_Spyder;
+        }
+        .work--second--6{
+            grid-area:Porsche-Cayenne_Turbo_Coupe;
+        }
+        .work--second--7{
+            grid-area:Mercedes-Benz-GLC63_S;
+            &::before{
+                @include grid-pic-before-768;
+            }
+        }
+        .work--second--8{
+            grid-area:Mercedes-Benz-CLA45_S;
+            &::before{
+                @include grid-pic-before-768;
+            }
+            &.big::before{
+                font-size: 1em;
+                height: 30px;
+            }
+        }
+        .work--second--9{
+            grid-area:BMW-745Le;
+            &::before{
+                @include grid-pic-before-768;
+            }
+            &.big::before{
+                font-size: 1em;
+                height: 30px;
+            }
+        }
+        .work--second--10{
+            grid-area:Audi-TT_RS_Roadster;
+            &::before{
+                @include grid-pic-before-768;
+            }
+            &.big::before{
+                font-size: 1em;
+                height: 30px;
+            }
+        }
+        .work--second--11{
+            grid-area:Bentley-Continental_GT;
+        }
+        .work--second--12{
+            grid-area:BMW-M8_Competition_Coupe;
+            &::before{
+                @include grid-pic-before-768;
+            }
+        }
+        .work--second--13{
+            grid-area:Porsche-Panamera;
+            &::before{
+                @include grid-pic-before-768;
+            }
+        }
+        .work--second--14{
+            grid-area:BMW-X3_M_Competition;
+            &::before{
+                @include grid-pic-before-768;
+            }
+            &.big::before{
+                font-size: 1em;
+                height: 30px;
+            }
+        }
+    }
+
+
+    .clients__container{
+        height: 150vh;
+        @include flex(column,space-around);
+        .clients-co-container{
+            height: 100%;
+            .clients__vertical{
+                height: 10vh;
+                margin-top: 5vh;
+            }
+            .clients__title{
+                text-align: center;
+                font-size: 2em;
+                line-height: 1.5em;
+            }
+            .clients__pics__container{
+                width: 60vw;
+                .clients__pic{
+                    width: 7vw;
+                    height: 7vw;
+                }
+            }
+            .quotes__container{
+                width: 80vw;
+                height: 25vh;
+                @include flex(row,center);
+            }
+            .names__container{
+                .name{}
+            }
+            .minor-container{
+                width: 80vw;
+                height: 60vh;
+                .featured{
+                    font-size: 1.3em;
+                    @include font-light;
+                }
+                .journals__container{
+                    width: 80vw;
+                    height: 50vh;
+                    @include flex(column,space-around);
+                    .journal{
+                        width: 30vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact--first{
+        height: 140vh;
+        background-image : url(../img/e147b659.jpg);
+        background-blend-mode: multiply;
+        background-color : rgba(0,0,0,.4);
+        margin-bottom: 85vh;
+        .contact__titles__container{
+            height: 30vh;
+            @include flex(column,space-around);
+            padding: 5vh 0;
+            .contact--first__title--small{}
+            .contact--first__title--large{
+                width: 90vw;
+                text-align: center;
+            }            
+        }
+        .contact-double-container{
+            @include flex(column,space-around);
+            .contact__form__container{
+                width: 80vw;
+                .contact__form{
+                    width: 100%;
+                    height: 100%;
+                    .input__container{
+                        width: 60vw;
+                        .input{}
+                        .label{}
+                    }
+                }
+            }
+            .information__container{
+                width: 80vw;
+                .info__container{
+                    width: 100%;
+                    justify-content: space-around;
+                    .info__svg{}
+                    .info__span{
+                        width: 40vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact--second{
+        height: 85vh;
+        .contact--second__container{
+            .contact__sub-container{
+                width: 80vw;
+                height: 15vh;
+                @include flex(row,space-around);
+                .artificial{
+                    @include flex(column,space-around);
+                    min-width: 25vw;
+                    height: 12vh; 
+                    .span__container--3x{
+                    }
+                    .span__container--2x{
+                    }
+                    .country__container{
+                        width: 100%;
+                        .country-flag{}
+                    }
+                }
+            }
+            .brand{}
+            .social__container{
+                width: 40vw;
+                .social-icon{}
+            }
+        }
+        .first--footer{
+            height: 70vh;
+            @include flex(column,space-around);
+        }
+        .second--footer{
+            height: 15vh;
+        }
+        .third--footer{
+            height: 3vh;
+        }
+    }
+    
+}

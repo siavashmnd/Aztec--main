@@ -1,0 +1,3407 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8081/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Aztec || Dealership </title>
+    <link rel="shortcut icon" type="image/png" href="http://localhost:8081/wheel.png">
+<style type="text/css">@import url(https://fonts.googleapis.com/css?family=Cormorant|Quicksand:300,400&display=swap);</style><style type="text/css">* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+*::after, *::before {
+  box-sizing: border-box; }
+
+body {
+  overflow-x: hidden; }
+
+.card-is-shown {
+  z-index: 10; }
+
+#home.class0 {
+  background-image: url(imgs/0.c9d80236a854426af9a489d4a0934021.jpg); }
+
+#home.class1 {
+  background-image: url(imgs/Bentley-Flying_Spur-2020-1600-03.a13dfbc4aac2b5c365d4fe7008803e2d.jpg); }
+
+#home.class2 {
+  background-image: url(imgs/Rolls-Royce-Phantom_Tranquillity-2019-1600-15.0961dfcdbb41ef0dbfb940fb2857911b.jpg); }
+
+.quotes.fade-away {
+  display: none; }
+
+.name.fade-away {
+  display: none; }
+
+.cannotclick {
+  pointer-events: none; }
+
+.btn-hide {
+  display: none; }
+
+.btn-show {
+  display: block; }
+
+.header__nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 50;
+  width: 100vw;
+  height: 7vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 2px -1px #000; }
+  .header__nav .nav__list--brand {
+    width: 12.5rem;
+    display: inline-block;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    justify-content: space-between;
+    margin-left: 1vw; }
+    .header__nav .nav__list--brand .nav__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      font-size: 2em;
+      letter-spacing: 10px;
+      font-weight: 300; }
+      .header__nav .nav__list--brand .nav__item .nav__img {
+        height: 5vh; }
+      .header__nav .nav__list--brand .nav__item .nav__link {
+        text-decoration: none;
+        color: #000;
+        font-family: "Cormorant", serif;
+        cursor: pointer; }
+  .header__nav .nav__list--navigation {
+    margin-left: auto;
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none; }
+    .header__nav .nav__list--navigation .nav__item {
+      height: 100%;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      text-transform: capitalize;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative; }
+      .header__nav .nav__list--navigation .nav__item::after, .header__nav .nav__list--navigation .nav__item::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        background-color: #DB9F00;
+        transform: scaleX(0);
+        transition: 300ms transform ease-in; }
+      .header__nav .nav__list--navigation .nav__item::after {
+        top: 0; }
+      .header__nav .nav__list--navigation .nav__item::before {
+        bottom: 0; }
+      .header__nav .nav__list--navigation .nav__item .nav__link {
+        text-decoration: none;
+        color: #000;
+        letter-spacing: 3px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+    .header__nav .nav__list--navigation .nav__item.active::after, .header__nav .nav__list--navigation .nav__item.active::before {
+      transform: scaleX(1); }
+  .header__nav .nav__menu-icon {
+    display: none; }
+
+#home {
+  height: 93vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  background-image: url(imgs/0.c9d80236a854426af9a489d4a0934021.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: black; }
+  #home .left {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 6vw;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #7C7C7C; }
+    #home .left__list {
+      width: 100%;
+      height: 8vh;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+      #home .left__list .left__item {
+        cursor: pointer;
+        font-family: "Cormorant", serif;
+        font-size: 3em;
+        color: #7C7C7C;
+        width: 100%;
+        text-align: center;
+        transition: 200ms color ease-in;
+        height: 8vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+      #home .left__list .left__behind {
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        font-size: 1.5em;
+        text-transform: capitalize;
+        width: 10vw; }
+      #home .left__list .left__item.active-sideBar {
+        color: #fff; }
+      #home .left__list .left__item.active-sideBar-hover {
+        color: #fff; }
+      #home .left__list .stripe {
+        position: relative; }
+        #home .left__list .stripe::after {
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 80%;
+          right: 0;
+          bottom: 0;
+          background-color: #DB9F00;
+          transform: scaleY(0);
+          transition: 200ms transform ease-in; }
+        #home .left__list .stripe.string::after {
+          transform: scaleY(1); }
+  #home .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 30vw;
+    height: 70vh;
+    left: 35%;
+    top: 15%;
+    transform-style: preserve-3d; }
+    #home .card .card__vertical {
+      background-color: #DB9F00;
+      display: block;
+      width: 2px;
+      height: 100px;
+      transform: scaleY(0);
+      transform-origin: top; }
+    #home .card .card--small__title {
+      font-family: "Quicksand", sans-serif;
+      color: #DB9F00;
+      text-transform: uppercase;
+      font-weight: 300;
+      opacity: 0;
+      transform: translateZ(-3px);
+      text-align: center; }
+    #home .card .card--large__title {
+      font-family: "Cormorant", serif;
+      text-transform: capitalize;
+      font-size: 5em;
+      text-align: center;
+      color: #fff;
+      opacity: 0;
+      transform: translateZ(5px); }
+    #home .card .card__button {
+      background: transparent;
+      font-family: "Quicksand", sans-serif;
+      text-transform: capitalize;
+      font-size: 1em;
+      padding: 1em 3em;
+      border: 0.1px solid #DB9F00;
+      color: #DB9F00;
+      font-weight: 300;
+      margin-top: 70px;
+      opacity: 0;
+      cursor: pointer;
+      outline: 1px solid #DB9F00;
+      outline-offset: -5px;
+      transition: outline-offset 100ms ease; }
+      #home .card .card__button:hover {
+        outline: 1px solid #DB9F00;
+        outline-offset: 3px; }
+
+.about--first {
+  width: 100vw;
+  height: 80vh;
+  background-color: #fff; }
+  .about--first .container--first {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .about--first .container--first .about__vertical {
+      display: block;
+      height: 50px;
+      width: 2px;
+      background-color: #DB9F00; }
+    .about--first .container--first .about__title--small, .about--first .container--first .about__title--large {
+      text-transform: uppercase;
+      font-family: "Quicksand", sans-serif;
+      margin-top: 40px;
+      font-weight: 300;
+      letter-spacing: 5px; }
+    .about--first .container--first .about__title--large {
+      font-size: 3em;
+      letter-spacing: 15px;
+      margin-top: 20px; }
+  .about--first .container--second {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative; }
+    .about--first .container--second .second__sub-container {
+      position: absolute;
+      height: 100%;
+      width: 33vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .about--first .container--second .second__sub-container .about__svg {
+        height: 120px; }
+      .about--first .container--second .second__sub-container .about__text {
+        display: block;
+        margin-top: 20px;
+        font-family: "Quicksand", sans-serif;
+        text-transform: capitalize; }
+    .about--first .container--second .absolute--first {
+      left: 7vw;
+      transform: translateY(35vh); }
+    .about--first .container--second .absolute--second {
+      transform: translateY(35vh); }
+    .about--first .container--second .absolute--third {
+      right: 7vw;
+      transform: translateY(35vh); }
+
+.about--second {
+  width: 100vw;
+  height: 70vh;
+  background-image: url(imgs/0dd68c63.a8921aa28e19849298bb5585610a9543.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  z-index: 10; }
+  .about--second .container--second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 70%; }
+    .about--second .container--second .second__title {
+      text-transform: uppercase;
+      font-size: 2.5em;
+      font-weight: 300;
+      letter-spacing: 10px;
+      text-align: center; }
+    .about--second .container--second .second__text {
+      line-height: 30px;
+      text-align: center; }
+    .about--second .container--second .second__btn {
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      border: 1px solid #DB9F00;
+      background-color: transparent;
+      color: #fff;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      padding: 0.5em 1em; }
+
+.about--third {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; }
+  .about--third .third__container--first {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .about--third .third__container--first .third__title {
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      letter-spacing: 20px;
+      font-size: 2.7em; }
+    .about--third .third__container--first .third__span {
+      align-self: flex-start;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      margin-top: 5vh; }
+  .about--third .third__container--second {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around; }
+    .about--third .third__container--second .third__sub-container {
+      width: 25vw;
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      box-shadow: 0px 0px 3px -1px #DB9F00;
+      padding: 0 2vw;
+      border-radius: 2px; }
+      .about--third .third__container--second .third__sub-container .sub-container__title {
+        align-self: flex-start;
+        font-family: "Quicksand", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        width: 100%;
+        text-align: center; }
+      .about--third .third__container--second .third__sub-container .sub-container__text {
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        text-align: center;
+        font-size: .8em; }
+      .about--third .third__container--second .third__sub-container .graphs--container {
+        width: 23vw;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; }
+        .about--third .third__container--second .third__sub-container .graphs--container .graph--container {
+          width: 23vw;
+          height: 4vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between; }
+          .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph__title {
+            align-self: flex-start;
+            font-family: "Quicksand", sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.7em; }
+          .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph {
+            width: 23vw;
+            height: 0.3vh;
+            background-color: #DADADA; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--95 {
+              height: 100%;
+              background-color: #DB9F00;
+              position: relative;
+              transform: scaleX(0);
+              width: 95%; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--95::before {
+                content: "95%";
+                position: absolute;
+                right: 0;
+                top: -20px;
+                font-family: "Quicksand", sans-serif;
+                font-weight: 300;
+                opacity: 0;
+                transition: opacity 300ms ease;
+                font-size: .8em; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--95.show-before::before {
+              opacity: 1; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--85 {
+              height: 100%;
+              background-color: #DB9F00;
+              position: relative;
+              transform: scaleX(0);
+              width: 85%; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--85::before {
+                content: "85%";
+                position: absolute;
+                right: 0;
+                top: -20px;
+                font-family: "Quicksand", sans-serif;
+                font-weight: 300;
+                opacity: 0;
+                transition: opacity 300ms ease;
+                font-size: .8em; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--85.show-before::before {
+              opacity: 1; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--70 {
+              height: 100%;
+              background-color: #DB9F00;
+              position: relative;
+              transform: scaleX(0);
+              width: 70%; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--70::before {
+                content: "70%";
+                position: absolute;
+                right: 0;
+                top: -20px;
+                font-family: "Quicksand", sans-serif;
+                font-weight: 300;
+                opacity: 0;
+                transition: opacity 300ms ease;
+                font-size: .8em; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--70.show-before::before {
+              opacity: 1; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--65 {
+              height: 100%;
+              background-color: #DB9F00;
+              position: relative;
+              transform: scaleX(0);
+              width: 65%; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--65::before {
+                content: "65%";
+                position: absolute;
+                right: 0;
+                top: -20px;
+                font-family: "Quicksand", sans-serif;
+                font-weight: 300;
+                opacity: 0;
+                transition: opacity 300ms ease;
+                font-size: .8em; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--65.show-before::before {
+              opacity: 1; }
+
+.services--first {
+  width: 100vw;
+  height: 70vh;
+  background-image: url(imgs/Aston_Martin-DBS_Superleggera_OHMSS_Edition-2019-1600-0a.9549548bdb3f6a87711175e977f7cbaf.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .services--first .first__title {
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 5px; }
+  .services--first .first__cards-container {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around; }
+    .services--first .first__cards-container .flip-card {
+      width: 28vw;
+      height: 40vh; }
+      .services--first .first__cards-container .flip-card__content {
+        text-align: center;
+        position: relative;
+        transform-style: preserve-3d; }
+        .services--first .first__cards-container .flip-card__content .flip-card__front {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 2em;
+          backface-visibility: hidden;
+          transform-style: preserve-3d;
+          background-color: #fff;
+          height: 40vh; }
+          .services--first .first__cards-container .flip-card__content .flip-card__front::before {
+            content: "";
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            right: 1em;
+            bottom: 1em;
+            border: 2px solid #DB9F00;
+            transform: translateZ(3rem); }
+          .services--first .first__cards-container .flip-card__content .flip-card__front .flip-card__title {
+            transform: translateZ(5rem);
+            font-family: "Quicksand", sans-serif;
+            text-transform: uppercase; }
+          .services--first .first__cards-container .flip-card__content .flip-card__front .flip-card__subtitle {
+            transform: translateZ(3rem);
+            font-family: "Quicksand", sans-serif; }
+        .services--first .first__cards-container .flip-card__content .flip-card__back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 2em;
+          backface-visibility: hidden;
+          transform-style: preserve-3d;
+          background-color: #fff;
+          transform: rotateY(180deg);
+          height: 40vh; }
+          .services--first .first__cards-container .flip-card__content .flip-card__back .flip-card__back__content {
+            transform: translateZ(5rem);
+            font-family: "Quicksand", sans-serif; }
+  .services--first .carousel__container {
+    display: none; }
+
+.services--second {
+  width: 100vw;
+  height: 40vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 2px #DB9F00 inset;
+  outline: 1px solid #DB9F00;
+  outline-offset: -6px; }
+  .services--second__title {
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 5px; }
+  .services--second__text {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    width: 50vw;
+    text-align: center;
+    margin-top: 2vh; }
+  .services--second__button {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #DB9F00;
+    font-size: 1.2em;
+    padding: .3em 1.2em;
+    margin-top: 5vh;
+    text-transform: capitalize; }
+
+.services--third {
+  width: 100vw;
+  height: 85vh;
+  background-image: url(imgs/Mercedes-Benz-GLC63_S_AMG_Coupe-2020-1600-5b.78177e4f924589e04364f2da01836694.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; }
+  .services--third__container {
+    height: 85vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative; }
+    .services--third__container .services--third__wheel {
+      height: 350px; }
+    .services--third__container .services--third__circle {
+      position: absolute;
+      height: 500px;
+      opacity: 0.5; }
+    .services--third__container .inside__circle {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background-color: #DADADA;
+      clip-path: circle(130px);
+      -webkit-clip-path: circle(130px);
+      z-index: 5;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+      .services--third__container .inside__circle__container {
+        position: absolute;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        opacity: 0; }
+        .services--third__container .inside__circle__container .inside__circle__title {
+          font-family: "Quicksand", sans-serif; }
+        .services--third__container .inside__circle__container .inside__circle__text {
+          font-family: "Quicksand", sans-serif;
+          font-weight: 300; }
+    .services--third__container .wheel__svg {
+      position: absolute;
+      height: 50px;
+      cursor: pointer; }
+  .services--third .main--cont {
+    display: none; }
+
+.work--first {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; }
+  .work--first__vertical {
+    height: 50px;
+    width: 2px;
+    background-color: #DB9F00;
+    display: block; }
+  .work--first__title--small {
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 3px;
+    margin-top: 5vh; }
+  .work--first__title--large {
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 10px;
+    font-size: 3em;
+    margin: 3vh 0; }
+  .work--first__text {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    width: 50%;
+    text-align: center; }
+  .work--first__list {
+    margin-top: 10vh;
+    list-style: none;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    .work--first__list .work--first__item {
+      font-family: "Quicksand", sans-serif;
+      cursor: pointer;
+      height: 5vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      position: relative; }
+      .work--first__list .work--first__item::before, .work--first__list .work--first__item::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #DB9F00;
+        left: 0px;
+        transform: scaleX(0);
+        transition: transform 300ms ease-out; }
+      .work--first__list .work--first__item::before {
+        top: 0; }
+      .work--first__list .work--first__item::after {
+        bottom: 0; }
+      .work--first__list .work--first__item.extend::after, .work--first__list .work--first__item.extend::before {
+        transform: scaleX(1); }
+
+.work--second {
+  width: 100vw;
+  height: 300vh;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+  grid-template-areas: "Aston_Martin-DBS Aston_Martin-DBS Audi-S4_Avant" "Aston_Martin-DBS Aston_Martin-DBS Audi-S4_Avant" "Bentley-Flying_Spur Bentley-Flying_Spur Porsche-Panamera" "Bentley-Flying_Spur Bentley-Flying_Spur Porsche-Panamera" "Lamborghini-Urus Porsche-718_Spyder Mercedes-Benz-GLC63_S" "Lamborghini-Urus Porsche-718_Spyder Mercedes-Benz-GLC63_S"                                                "BMW-M8_Competition_Coupe Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe" "BMW-M8_Competition_Coupe Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe" "Mercedes-Benz-CLA45_S BMW-745Le Audi-TT_RS_Roadster" "Mercedes-Benz-CLA45_S BMW-745Le Audi-TT_RS_Roadster" "Bentley-Continental_GT Bentley-Continental_GT BMW-X3_M_Competition" "Bentley-Continental_GT Bentley-Continental_GT BMW-X3_M_Competition"; }
+  .work--second--1 {
+    background-image: url(imgs/Aston_Martin-DBS_Superleggera_White_Stone-2019-1280-05.6c37654e4f8a8d116db9bff70711bab2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Aston_Martin-DBS;
+    background-position-y: 470px; }
+    .work--second--1::before {
+      content: "2019 Aston Martin DBS Superleggera WhiteStone";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--1:hover {
+      background-image: url(imgs/Aston_Martin-DBS_Superleggera_White_Stone-2019-1280-75.a9dbd6cf86bdfee0ef547619dd03af51.jpg);
+      background-position: center; }
+  .work--second--2 {
+    background-image: url(imgs/Audi-S4_Avant_TDI-2020-800-05.b2d9d7029f694c7dd4b098c5172c8209.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Audi-S4_Avant; }
+    .work--second--2::before {
+      content: "2020 Audi S4 Avant TDI";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--2:hover {
+      background-image: url(imgs/Audi-S4_Avant_TDI-2020-800-1a.3db340a2aab95c78768f09112b069b9d.jpg); }
+  .work--second--3 {
+    background-image: url(imgs/Bentley-Flying_Spur_First_Edition-2020-1280-03.bf926236c69083da3e2904537e18dbac.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Bentley-Flying_Spur; }
+    .work--second--3::before {
+      content: "2020 Bentley FlyingSpur FirstEdition";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--3:hover {
+      background-image: url(imgs/Bentley-Flying_Spur_First_Edition-2020-1280-09.b061b1a6a4276da9732a44f9e8dcb98e.jpg); }
+  .work--second--4 {
+    background-image: url(imgs/Lamborghini-Urus-2019-800-28.2954a2ca723ef320c3cf52f598159d12.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Lamborghini-Urus; }
+    .work--second--4::before {
+      content: "2019 Lamborghini Urus";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--4:hover {
+      background-image: url(imgs/Lamborghini-Urus-2019-800-be.e262458c99fe2416b9fcd575a287b17b.jpg); }
+  .work--second--5 {
+    background-image: url(imgs/Porsche-718_Spyder-2020-800-0e.eb8c6b7ac9493a7bddf25b30bb883c36.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Porsche-718_Spyder; }
+    .work--second--5::before {
+      content: "2020 Porsche 718 Spyder";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--5:hover {
+      background-image: url(imgs/Porsche-718_Spyder-2020-800-a1.c68a32e7070f7925641d30d0fc66abb0.jpg); }
+  .work--second--6 {
+    background-image: url(imgs/Porsche-Cayenne_Turbo_Coupe-2020-1280-34.e3c7cdb3b9f37f6e8afe2ae1f4de6f32.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Porsche-Cayenne_Turbo_Coupe; }
+    .work--second--6::before {
+      content: "2020 Porsche Cayenne Turbo Coupe";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--6:hover {
+      background-image: url(imgs/Porsche-Cayenne_Turbo_Coupe-2020-1280-60.4a6fabf7445b4a4178b2b23afa6414be.jpg); }
+  .work--second--7 {
+    background-image: url(imgs/Mercedes-Benz-GLC63_S_AMG_Coupe-2020-800-21.1ea6481b6700a506c868ed80d0b44745.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Mercedes-Benz-GLC63_S; }
+    .work--second--7::before {
+      content: "2020 MercedesBenz GLC63S AMG Coupe";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--7:hover {
+      background-image: url(imgs/Mercedes-Benz-GLC63_S_AMG_Coupe-2020-800-57.7857a5550333e070a876eb88885bace4.jpg); }
+  .work--second--8 {
+    background-image: url(imgs/Mercedes-Benz-CLA45_S_AMG_4Matic_Shooting_Brake-2020-800-12.bb4413c5783e533c912966526d91b311.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Mercedes-Benz-CLA45_S; }
+    .work--second--8::before {
+      content: "2020 MercedesBenz CLA45S AMG 4Matic ShootingBrake";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--8:hover {
+      background-image: url(imgs/Mercedes-Benz-CLA45_S_AMG_4Matic_Shooting_Brake-2020-800-11.513803d99c3aeeb384c050349d676871.jpg); }
+  .work--second--9 {
+    background-image: url(imgs/BMW-745Le-2020-800-03.1f3c38f79751beff2dd12158777abf1f.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: BMW-745Le; }
+    .work--second--9::before {
+      content: "2020 BMW 745Le";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--9:hover {
+      background-image: url(imgs/BMW-745Le-2020-800-62.100625286ec5b7abae3cab9ed0f56653.jpg); }
+  .work--second--10 {
+    background-image: url(imgs/Audi-TT_RS_Roadster-2020-800-03.e314b881b4ec45d6067477eda24bc876.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Audi-TT_RS_Roadster; }
+    .work--second--10::before {
+      content: "2020 Audi TT RS Roadster";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--10:hover {
+      background-image: url(imgs/Audi-TT_RS_Roadster-2020-800-11.1923ebda9758ce52e96a4624b7fe9bb8.jpg); }
+  .work--second--11 {
+    background-image: url(imgs/Bentley-Continental_GT_V8-2020-1280-0b.1a889589b856de7550f06349c7adae1b.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Bentley-Continental_GT; }
+    .work--second--11::before {
+      content: "2020 Bentley Continental GT V8";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--11:hover {
+      background-image: url(imgs/Bentley-Continental_GT_V8-2020-1280-54.ef8168394b3f2195e8b8e27f1a1ec77f.jpg); }
+  .work--second--12 {
+    background-image: url(imgs/BMW-M8_Competition_Coupe-2020-800-0d.9c4a87fb1f851007935917d58febeed8.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: BMW-M8_Competition_Coupe; }
+    .work--second--12::before {
+      content: "2020 BMW M8 Competition Coupe";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--12:hover {
+      background-image: url(imgs/BMW-M8_Competition_Coupe-2020-800-1a.6150d09edb26726ed820d2ccdf75472e.jpg); }
+  .work--second--13 {
+    background-image: url(imgs/Porsche-Panamera_GTS_Sport_Turismo-2019-800-5e.7582099e16d993550dcd98bb4b9b4e4d.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: Porsche-Panamera; }
+    .work--second--13::before {
+      content: "2019 Porsche Panamera GTS SportTurismo";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--13:hover {
+      background-image: url(imgs/Porsche-Panamera_GTS_Sport_Turismo-2019-800-a9.418f67323ab4f5b1b192f340bd9716eb.jpg); }
+  .work--second--14 {
+    background-image: url(imgs/BMW-X3_M_Competition-2020-800-2f.4033661bcf32a18de3b91e62e0b15e37.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 500ms ease;
+    grid-area: BMW-X3_M_Competition; }
+    .work--second--14::before {
+      content: "2020 BMW X3 M Competition";
+      position: absolute;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 5px;
+      color: #fff; }
+    .work--second--14:hover {
+      background-image: url(imgs/BMW-X3_M_Competition-2020-800-89.f739d73f33f87cca7b4170900c5a2d96.jpg); }
+
+.clients__container {
+  width: 100vw;
+  height: 90vh;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; }
+  .clients__container .clients-co-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .clients__container .clients-co-container .clients__vertical {
+      width: 2px;
+      height: 50px;
+      background-color: #DB9F00; }
+    .clients__container .clients-co-container .clients__title {
+      font-size: 2.5em;
+      letter-spacing: 15px; }
+    .clients__container .clients-co-container .clients__pics__container {
+      width: 50vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      .clients__container .clients-co-container .clients__pics__container .clients__pic {
+        height: 70px;
+        width: 70px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        cursor: pointer;
+        filter: grayscale(1); }
+      .clients__container .clients-co-container .clients__pics__container .clients__pic:nth-child(1) {
+        filter: grayscale(0); }
+    .clients__container .clients-co-container .quotes__container {
+      width: 70vw;
+      height: 15vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+      .clients__container .clients-co-container .quotes__container .quotes {
+        text-align: center; }
+    .clients__container .clients-co-container .names__container .name {
+      position: relative;
+      padding: 5px 0px; }
+      .clients__container .clients-co-container .names__container .name::before, .clients__container .clients-co-container .names__container .name::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #DB9F00;
+        left: 0; }
+      .clients__container .clients-co-container .names__container .name::before {
+        top: 0; }
+      .clients__container .clients-co-container .names__container .name::after {
+        bottom: 0; }
+    .clients__container .clients-co-container .minor-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 10vh;
+      margin-top: 10vh; }
+      .clients__container .clients-co-container .minor-container .featured {
+        text-transform: capitalize; }
+      .clients__container .clients-co-container .minor-container .journals__container {
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around; }
+
+.contact--first {
+  width: 100vw;
+  height: 90vh;
+  background-image: url(imgs/Porsche-Panamera_Turbo_S_E-Hybrid_Sport_Turismo-2018-1600-ab.031d58a16359c3ffd34ee45f664a0689.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10;
+  margin-bottom: 50vh; }
+  .contact--first .contact__titles__container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; }
+    .contact--first .contact__titles__container .contact--first__title--small {
+      color: #fff;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 10px; }
+    .contact--first .contact__titles__container .contact--first__title--large {
+      color: #fff;
+      font-family: "Quicksand", sans-serif;
+      text-transform: uppercase;
+      font-size: 3em;
+      letter-spacing: 10px;
+      margin-top: 2vh; }
+  .contact--first .contact-double-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    .contact--first .contact-double-container .contact__form__container {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+      .contact--first .contact-double-container .contact__form__container .contact__form {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+        .contact--first .contact-double-container .contact__form__container .contact__form .input__container {
+          width: 80%;
+          height: 6vh;
+          position: relative;
+          display: flex; }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container::before, .contact--first .contact-double-container .contact__form__container .contact__form .input__container::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            transform: scale(0);
+            transform-origin: left;
+            transition: transform 500ms ease-out; }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container::after {
+            background-color: #58D68D; }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container::before {
+            background-color: #C0392B; }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container.wrong:before {
+            transform: scale(1); }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container.correct:after {
+            transform: scale(1); }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container .input {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 300;
+            width: 100%;
+            height: 50%;
+            align-self: flex-end;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #fff;
+            font-size: 1.2em;
+            background-color: transparent;
+            color: #fff; }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container .label {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 300;
+            position: absolute;
+            bottom: 7%;
+            font-size: 1em;
+            color: #fff;
+            transform: translateY(0px) scale(1);
+            transition: transform 700ms ease, color 500ms ease;
+            padding-left: 2px; }
+            .contact--first .contact-double-container .contact__form__container .contact__form .input__container .label-wrong {
+              color: #C0392B; }
+            .contact--first .contact-double-container .contact__form__container .contact__form .input__container .label-correct {
+              color: #58D68D; }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container .label-focus-in {
+            transform: translateY(-30px) scale(0.8); }
+        .contact--first .contact-double-container .contact__form__container .contact__form .submit__container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 60%;
+          height: 4vh; }
+          .contact--first .contact-double-container .contact__form__container .contact__form .submit__container .submit {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 300;
+            font-size: 1.2em;
+            border: 1px solid #DB9F00;
+            background-color: transparent;
+            color: #fff;
+            padding: 0.2em 2em; }
+    .contact--first .contact-double-container .information__container {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .contact--first .contact-double-container .information__container .info__container {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; }
+        .contact--first .contact-double-container .information__container .info__container .info__svg {
+          height: 70px; }
+        .contact--first .contact-double-container .information__container .info__container .info__span {
+          font-family: "Quicksand", sans-serif;
+          font-weight: 300;
+          color: #fff;
+          width: 50%;
+          text-align: center; }
+
+.contact--second {
+  width: 100vw;
+  height: 50vh;
+  position: fixed;
+  z-index: -5;
+  bottom: 0;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .contact--second .contact--second__span {
+    font-family: "Quicksand", sans-serif;
+    text-align: center; }
+  .contact--second .contact--second__span--light {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    color: #7C7C7C;
+    text-align: center;
+    font-size: .8em; }
+  .contact--second .contact--second__container .contact__sub-container {
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 0px 2px -1px #000;
+    border-radius: 5px;
+    padding: 3vh 0; }
+    .contact--second .contact--second__container .contact__sub-container .artificial {
+      height: 50%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .contact--second .contact--second__container .contact__sub-container .artificial .span__container--3x {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+      .contact--second .contact--second__container .contact__sub-container .artificial .span__container--2x {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+      .contact--second .contact--second__container .contact__sub-container .artificial .country__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 15vw;
+        margin-top: 1vh; }
+        .contact--second .contact--second__container .contact__sub-container .artificial .country__container .contact--second__span--light {
+          font-size: 1em; }
+        .contact--second .contact--second__container .contact__sub-container .artificial .country__container .country-flag {
+          height: 20px; }
+  .contact--second .contact--second__container .brand {
+    font-family: "Cormorant", serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 20px; }
+  .contact--second .contact--second__container .social__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 20vw;
+    margin-top: 3vh; }
+    .contact--second .contact--second__container .social__container .social-icon {
+      height: 30px; }
+  .contact--second .first--footer {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5vh; }
+  .contact--second .second--footer {
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .contact--second .third--footer {
+    width: 80%;
+    height: 3vh; }
+
+@media all and (max-width: 991px) {
+  .header__nav .nav__list--navigation {
+    opacity: 0;
+    background-color: #fff;
+    position: absolute;
+    width: 90vw;
+    height: 40vh;
+    top: 10vh;
+    left: 5vw;
+    right: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(0);
+    pointer-events: none;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px -1px #000; }
+    .header__nav .nav__list--navigation .nav__item .nav__link.bold {
+      border-top: dotted 1px #DB9F00;
+      border-bottom: dotted 1px #DB9F00; }
+  .header__nav .nav__list--navigation.sheet {
+    opacity: 1;
+    transform: translateY(-2vh);
+    pointer-events: all; }
+  .header__nav .nav__menu-icon__container {
+    position: relative;
+    cursor: pointer;
+    margin-right: 2vw; }
+    .header__nav .nav__menu-icon__container .nav__menu-icon {
+      display: block;
+      height: 5vh; }
+    .header__nav .nav__menu-icon__container::before, .header__nav .nav__menu-icon__container::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      background-color: #DB9F00;
+      transform: scaleX(0);
+      transition: transform 300ms ease-out; }
+    .header__nav .nav__menu-icon__container::after {
+      top: 5px; }
+    .header__nav .nav__menu-icon__container::before {
+      bottom: 5px; }
+    .header__nav .nav__menu-icon__container.burger::after, .header__nav .nav__menu-icon__container.burger::before {
+      transform: scaleX(1); }
+  #home .left {
+    width: 8vw; }
+  #home .card .card__vertical {
+    height: 12vh; }
+  #home .card .card--small__title {
+    font-size: .9em; }
+  #home .card .card--large__title {
+    font-size: 4em; }
+  .about--second {
+    height: 100vh;
+    background-blend-mode: multiply;
+    background-image: url(imgs/5dd4bf07.037b82e6c361d9c02f2c74e6eb1ee148.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: bottom; }
+    .about--second .container--second {
+      width: 70%; }
+  .about--third {
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; }
+    .about--third .third__container--first {
+      height: 70vh; }
+      .about--third .third__container--first .third__title {
+        font-size: 2.5em; }
+    .about--third .third__container--second {
+      height: 50vh;
+      width: 95vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around; }
+      .about--third .third__container--second .third__sub-container {
+        width: 30vw;
+        height: 50vh;
+        padding: 0 2vw;
+        box-shadow: 0px 0px 3px -1px #DB9F00;
+        border-radius: 2px; }
+        .about--third .third__container--second .third__sub-container:last-child {
+          height: 30vh; }
+        .about--third .third__container--second .third__sub-container .sub-container__title {
+          font-size: 1.1em;
+          width: 100%;
+          text-align: center; }
+        .about--third .third__container--second .third__sub-container .sub-container__text {
+          font-size: .8em;
+          text-align: center; }
+        .about--third .third__container--second .third__sub-container .graphs--container {
+          height: 20vh;
+          width: 25vw; }
+          .about--third .third__container--second .third__sub-container .graphs--container .graph--container {
+            width: 100%; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph__title {
+              font-size: 0.7em;
+              height: 4vh;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph {
+              width: 25vw; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--95::before {
+                font-size: 0.8em; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--85::before {
+                font-size: 0.8em; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--70::before {
+                font-size: 0.8em; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--65::before {
+                font-size: 0.8em; }
+  .services--first {
+    height: 100vh;
+    background-image: url(imgs/d080caec.00172949c5a47b35f3709c470a119a59.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .services--first .first__title {
+      font-size: 2.5em;
+      margin-top: 2vh; }
+    .services--first .first__cards-container {
+      display: none; }
+    .services--first .carousel__container {
+      display: block;
+      width: 80vw;
+      height: 70vh;
+      overflow: hidden;
+      position: relative; }
+      .services--first .carousel__container .carousel__slider {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; }
+        .services--first .carousel__container .carousel__slider .slide {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center; }
+          .services--first .carousel__container .carousel__slider .slide .flip-card {
+            width: 60vw;
+            height: 40vh; }
+            .services--first .carousel__container .carousel__slider .slide .flip-card__content {
+              text-align: center;
+              position: relative;
+              transform-style: preserve-3d; }
+              .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__front {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 2em;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                background-color: #fff;
+                height: 40vh; }
+                .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__front::before {
+                  content: "";
+                  position: absolute;
+                  top: 1em;
+                  left: 1em;
+                  right: 1em;
+                  bottom: 1em;
+                  border: 2px solid #DB9F00;
+                  transform: translateZ(3rem); }
+                .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__front .flip-card__title {
+                  transform: translateZ(5rem);
+                  font-family: "Quicksand", sans-serif;
+                  text-transform: uppercase; }
+                .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__front .flip-card__subtitle {
+                  transform: translateZ(3rem);
+                  font-family: "Quicksand", sans-serif; }
+              .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 2em;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                background-color: #fff;
+                transform: rotateY(180deg);
+                height: 40vh; }
+                .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__back .flip-card__back__content {
+                  transform: translateZ(5rem);
+                  font-family: "Quicksand", sans-serif; }
+      .services--first .carousel__container .btnNext {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        top: 0; }
+      .services--first .carousel__container .btnPrev {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        bottom: 0; }
+      .services--first .carousel__container .arr {
+        height: 50px; }
+  .services--third {
+    width: 100vw;
+    height: 85vh;
+    background-image: url(imgs/Mercedes-Benz-GLC63_S_AMG_Coupe-2020-1600-5b.78177e4f924589e04364f2da01836694.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .services--third__container {
+      height: 85vh;
+      width: 60vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      position: relative; }
+      .services--third__container .services--third__wheel {
+        height: 300px; }
+      .services--third__container .services--third__circle {
+        position: absolute;
+        height: 500px;
+        opacity: 0.5; }
+      .services--third__container .inside__circle {
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        background-color: #DADADA;
+        clip-path: circle(110px);
+        -webkit-clip-path: circle(110px);
+        z-index: 5;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+        .services--third__container .inside__circle__container {
+          position: absolute;
+          text-align: center;
+          width: 200px;
+          height: 120px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          opacity: 0; }
+          .services--third__container .inside__circle__container .inside__circle__title {
+            font-family: "Quicksand", sans-serif;
+            font-size: 1.1em; }
+          .services--third__container .inside__circle__container .inside__circle__text {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 300;
+            font-size: .8em; }
+      .services--third__container .wheel__svg {
+        position: absolute;
+        height: 50px;
+        cursor: pointer; }
+    .services--third .main--cont {
+      display: none; }
+  .work--first {
+    height: 70vh; }
+    .work--first .work--first__title--large {
+      font-size: 2em; }
+    .work--first .work--first__text {
+      font-size: .9em; }
+    .work--first .work--first__list {
+      width: 65vw; }
+  .work--second {
+    height: 520vh;
+    width: 100vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    grid-template-areas: "Aston_Martin-DBS Audi-S4_Avant" "Bentley-Flying_Spur Bentley-Flying_Spur" "Bentley-Flying_Spur Bentley-Flying_Spur" "Porsche-Panamera Lamborghini-Urus" "Porsche-718_Spyder Porsche-718_Spyder" "Porsche-718_Spyder Porsche-718_Spyder" "Mercedes-Benz-GLC63_S BMW-M8_Competition_Coupe" "Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe" "Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe" "Mercedes-Benz-CLA45_S BMW-745Le" "Bentley-Continental_GT Bentley-Continental_GT" "Bentley-Continental_GT Bentley-Continental_GT" "Audi-TT_RS_Roadster BMW-X3_M_Competition"; }
+    .work--second .work--second--1 {
+      background-position: center;
+      grid-area: Aston_Martin-DBS; }
+    .work--second .work--second--2 {
+      grid-area: Audi-S4_Avant; }
+    .work--second .work--second--3 {
+      grid-area: Bentley-Flying_Spur; }
+    .work--second .work--second--4 {
+      grid-area: Lamborghini-Urus; }
+    .work--second .work--second--5 {
+      grid-area: Porsche-718_Spyder; }
+    .work--second .work--second--6 {
+      grid-area: Porsche-Cayenne_Turbo_Coupe; }
+    .work--second .work--second--7 {
+      grid-area: Mercedes-Benz-GLC63_S; }
+    .work--second .work--second--8 {
+      grid-area: Mercedes-Benz-CLA45_S; }
+    .work--second .work--second--9 {
+      grid-area: BMW-745Le; }
+    .work--second .work--second--10 {
+      grid-area: Audi-TT_RS_Roadster; }
+    .work--second .work--second--11 {
+      grid-area: Bentley-Continental_GT; }
+    .work--second .work--second--12 {
+      grid-area: BMW-M8_Competition_Coupe; }
+    .work--second .work--second--13 {
+      grid-area: Porsche-Panamera; }
+    .work--second .work--second--14 {
+      grid-area: BMW-X3_M_Competition; }
+  .clients__container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .clients__container .clients-co-container {
+      height: 100%; }
+      .clients__container .clients-co-container .clients__vertical {
+        height: 8vh;
+        margin-top: 3vh; }
+      .clients__container .clients-co-container .clients__title {
+        text-align: center;
+        font-size: 2em;
+        line-height: 1.5em; }
+      .clients__container .clients-co-container .clients__pics__container {
+        margin-top: 4vh;
+        width: 30rem; }
+        .clients__container .clients-co-container .clients__pics__container .clients__pic {
+          width: 6vw;
+          height: 6vw; }
+      .clients__container .clients-co-container .quotes__container {
+        width: 80vw;
+        height: 25vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: -4vh; }
+      .clients__container .clients-co-container .minor-container {
+        width: 80vw;
+        height: 15vh; }
+        .clients__container .clients-co-container .minor-container .featured {
+          font-size: 1.3em;
+          font-family: "Quicksand", sans-serif;
+          font-weight: 300; }
+        .clients__container .clients-co-container .minor-container .journals__container {
+          width: 80vw;
+          height: 10vh;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-around;
+          align-items: center; }
+  .contact--first {
+    width: 100vw;
+    height: 90vh;
+    background-image: url(imgs/Porsche-Panamera_Turbo_S_E-Hybrid_Sport_Turismo-2018-1600-ab.031d58a16359c3ffd34ee45f664a0689.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+    margin-bottom: 50vh; }
+    .contact--first .contact__titles__container {
+      width: 100%;
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end; }
+      .contact--first .contact__titles__container .contact--first__title--small {
+        color: #fff;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 10px; }
+      .contact--first .contact__titles__container .contact--first__title--large {
+        color: #fff;
+        font-family: "Quicksand", sans-serif;
+        text-transform: uppercase;
+        font-size: 3em;
+        letter-spacing: 10px;
+        margin-top: 2vh; }
+    .contact--first .contact-double-container {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      .contact--first .contact-double-container .contact__form__container {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+        .contact--first .contact-double-container .contact__form__container .contact__form {
+          width: 80%;
+          height: 80%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around; }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container {
+            width: 90%;
+            height: 6vh;
+            position: relative;
+            display: flex; }
+            .contact--first .contact-double-container .contact__form__container .contact__form .input__container::before, .contact--first .contact-double-container .contact__form__container .contact__form .input__container::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              bottom: 0;
+              left: 0;
+              transform: scale(0);
+              transform-origin: left;
+              transition: transform 500ms ease-out; }
+            .contact--first .contact-double-container .contact__form__container .contact__form .input__container::after {
+              background-color: #58D68D; }
+            .contact--first .contact-double-container .contact__form__container .contact__form .input__container::before {
+              background-color: #C0392B; }
+            .contact--first .contact-double-container .contact__form__container .contact__form .input__container.wrong:before {
+              transform: scale(1); }
+            .contact--first .contact-double-container .contact__form__container .contact__form .input__container.correct:after {
+              transform: scale(1); }
+            .contact--first .contact-double-container .contact__form__container .contact__form .input__container .input {
+              font-family: "Quicksand", sans-serif;
+              font-weight: 300;
+              width: 100%;
+              height: 50%;
+              align-self: flex-end;
+              border: none;
+              outline: none;
+              border-bottom: 2px solid #fff;
+              font-size: 1.2em;
+              background-color: transparent;
+              color: #fff; }
+            .contact--first .contact-double-container .contact__form__container .contact__form .input__container .label {
+              font-family: "Quicksand", sans-serif;
+              font-weight: 300;
+              position: absolute;
+              bottom: 7%;
+              font-size: 1em;
+              color: #fff;
+              transform: translateY(0px) scale(1);
+              transition: transform 700ms ease, color 500ms ease;
+              padding-left: 2px; }
+              .contact--first .contact-double-container .contact__form__container .contact__form .input__container .label-wrong {
+                color: #C0392B; }
+              .contact--first .contact-double-container .contact__form__container .contact__form .input__container .label-correct {
+                color: #58D68D; }
+            .contact--first .contact-double-container .contact__form__container .contact__form .input__container .label-focus-in {
+              transform: translateY(-30px) scale(0.8); }
+          .contact--first .contact-double-container .contact__form__container .contact__form .submit__container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            height: 4vh; }
+            .contact--first .contact-double-container .contact__form__container .contact__form .submit__container .submit {
+              font-family: "Quicksand", sans-serif;
+              font-weight: 300;
+              font-size: 1.2em;
+              border: 1px solid #DB9F00;
+              background-color: transparent;
+              color: #fff;
+              padding: 0.2em 2em; }
+      .contact--first .contact-double-container .information__container {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+        .contact--first .contact-double-container .information__container .info__container {
+          width: 70%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between; }
+          .contact--first .contact-double-container .information__container .info__container .info__svg {
+            height: 70px; }
+          .contact--first .contact-double-container .information__container .info__container .info__span {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 300;
+            color: #fff;
+            text-align: center;
+            width: 50%; }
+  .contact--second {
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    z-index: -5;
+    bottom: 0;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .contact--second .contact--second__span {
+      font-family: "Quicksand", sans-serif;
+      text-align: center; }
+    .contact--second .contact--second__span--light {
+      font-family: "Quicksand", sans-serif;
+      font-weight: 300;
+      color: #7C7C7C;
+      font-size: .8em; }
+    .contact--second .contact--second__container .contact__sub-container {
+      height: 100%;
+      width: 22vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      box-shadow: 0px 0px 2px -1px #000;
+      border-radius: 5px; }
+      .contact--second .contact--second__container .contact__sub-container .artificial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 22vw;
+        height: 25vh;
+        text-align: center; }
+        .contact--second .contact--second__container .contact__sub-container .artificial .span__container--3x {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around; }
+        .contact--second .contact--second__container .contact__sub-container .artificial .span__container--2x {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around; }
+        .contact--second .contact--second__container .contact__sub-container .artificial .country__container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          width: 7vw;
+          width: 80%;
+          height: 60%; }
+          .contact--second .contact--second__container .contact__sub-container .artificial .country__container .contact--second__span--light {
+            font-size: 1em; }
+          .contact--second .contact--second__container .contact__sub-container .artificial .country__container .country-flag {
+            height: 20px; }
+    .contact--second .contact--second__container .brand {
+      font-family: "Cormorant", serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 2em;
+      letter-spacing: 20px; }
+    .contact--second .contact--second__container .social__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 25vw;
+      margin-top: 3vh; }
+      .contact--second .contact--second__container .social__container .social-icon {
+        height: 30px; }
+    .contact--second .first--footer {
+      width: 100%;
+      height: 30vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 5vh; }
+    .contact--second .second--footer {
+      width: 100%;
+      height: 17vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+    .contact--second .third--footer {
+      width: 80%;
+      height: 3vh; } }
+
+@media all and (max-width: 768px) {
+  #home {
+    background-image: url(imgs/aac93b79.43598a4f79e4fd4aa21b7d5783bd1f7c.jpg); }
+    #home .left {
+      display: none; }
+    #home .card .card__vertical {
+      height: 10vh; }
+    #home .card .card--small__title {
+      width: 50vw;
+      text-align: center; }
+    #home .card .card--large__title {
+      font-size: 3.5em; }
+  .about--first {
+    height: 65vh; }
+    .about--first .container--first {
+      height: 30vh; }
+      .about--first .container--first .about__title--large {
+        font-size: 2em; }
+    .about--first .container--second {
+      height: 35vh; }
+      .about--first .container--second .second__sub-container .about__text {
+        font-size: 2.1vw; }
+      .about--first .container--second .second__sub-container .about__svg {
+        height: 15vw; }
+  .about--second {
+    height: 100vh;
+    background-image: url(imgs/5dd4bf07.037b82e6c361d9c02f2c74e6eb1ee148.jpg);
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: bottom; }
+    .about--second .container--second {
+      width: 70%; }
+  .about--third {
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; }
+    .about--third .third__container--first {
+      height: 70vh; }
+      .about--third .third__container--first .third__title {
+        font-size: 2.5em; }
+    .about--third .third__container--second {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .about--third .third__container--second .third__sub-container {
+        width: 90vw;
+        height: 25vh; }
+        .about--third .third__container--second .third__sub-container .sub-container__title {
+          font-size: 1.1em; }
+        .about--third .third__container--second .third__sub-container .sub-container__text {
+          font-size: .9em;
+          text-align: center; }
+        .about--third .third__container--second .third__sub-container .graphs--container {
+          height: 18vh;
+          width: 80vw; }
+          .about--third .third__container--second .third__sub-container .graphs--container .graph--container {
+            width: 100%; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph__title {
+              font-size: 0.7em;
+              height: 4vh;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph {
+              width: 80vw; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--95::before {
+                font-size: 0.8em; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--85::before {
+                font-size: 0.8em; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--70::before {
+                font-size: 0.8em; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--65::before {
+                font-size: 0.8em; }
+  .services--first {
+    height: 100vh;
+    background-image: url(imgs/d080caec.00172949c5a47b35f3709c470a119a59.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .services--first .first__title {
+      font-size: 2.5em;
+      margin-top: 2vh; }
+    .services--first .first__cards-container {
+      display: none; }
+    .services--first .carousel__container {
+      display: block;
+      width: 80vw;
+      height: 70vh;
+      overflow: hidden;
+      position: relative; }
+      .services--first .carousel__container .carousel__slider {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; }
+        .services--first .carousel__container .carousel__slider .slide {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center; }
+          .services--first .carousel__container .carousel__slider .slide .flip-card {
+            width: 60vw;
+            height: 40vh; }
+            .services--first .carousel__container .carousel__slider .slide .flip-card__content {
+              text-align: center;
+              position: relative;
+              transform-style: preserve-3d; }
+              .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__front {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 2em;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                background-color: #fff;
+                height: 40vh; }
+                .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__front::before {
+                  content: "";
+                  position: absolute;
+                  top: 1em;
+                  left: 1em;
+                  right: 1em;
+                  bottom: 1em;
+                  border: 2px solid #DB9F00;
+                  transform: translateZ(3rem); }
+                .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__front .flip-card__title {
+                  transform: translateZ(5rem);
+                  font-family: "Quicksand", sans-serif;
+                  text-transform: uppercase; }
+                .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__front .flip-card__subtitle {
+                  transform: translateZ(3rem);
+                  font-family: "Quicksand", sans-serif; }
+              .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 2em;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                background-color: #fff;
+                transform: rotateY(180deg);
+                height: 40vh; }
+                .services--first .carousel__container .carousel__slider .slide .flip-card__content .flip-card__back .flip-card__back__content {
+                  transform: translateZ(5rem);
+                  font-family: "Quicksand", sans-serif; }
+      .services--first .carousel__container .btnNext {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        top: 0; }
+      .services--first .carousel__container .btnPrev {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        bottom: 0; }
+      .services--first .carousel__container .arr {
+        height: 50px; }
+  .services--second__text {
+    width: 80vw;
+    font-size: 0.9em; }
+  .services--third {
+    height: 140vh;
+    background-image: url(imgs/88514661.5a944082cb77cad79bcd8aa8bb0a8db0.jpg);
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .services--third__container {
+      display: none; }
+    .services--third .main--cont {
+      width: 90vw;
+      height: 21.5vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start; }
+      .services--third .main--cont .left--cont {
+        height: 100%;
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+        .services--third .main--cont .left--cont .pix {
+          height: 5vh; }
+        .services--third .main--cont .left--cont .vert {
+          display: block;
+          width: 1px;
+          height: 15vh;
+          background-color: #DB9F00; }
+      .services--third .main--cont .right--cont {
+        height: 12vh;
+        width: 60vw;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        align-items: flex-start; }
+        .services--third .main--cont .right--cont .right--cont__title {
+          font-family: "Quicksand", sans-serif;
+          text-transform: capitalize; }
+        .services--third .main--cont .right--cont .right--cont__text {
+          font-family: "Quicksand", sans-serif;
+          font-weight: 300; }
+  .work--first {
+    height: 70vh; }
+    .work--first .work--first__title--large {
+      font-size: 2em; }
+    .work--first .work--first__text {
+      font-size: .9em; }
+    .work--first .work--first__list {
+      width: 65vw; }
+  .work--second {
+    height: 325vh;
+    width: 100vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    grid-template-areas: "Aston_Martin-DBS Audi-S4_Avant" "Bentley-Flying_Spur Bentley-Flying_Spur" "Bentley-Flying_Spur Bentley-Flying_Spur" "Porsche-Panamera Lamborghini-Urus" "Porsche-718_Spyder Porsche-718_Spyder" "Porsche-718_Spyder Porsche-718_Spyder" "Mercedes-Benz-GLC63_S BMW-M8_Competition_Coupe" "Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe" "Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe" "Mercedes-Benz-CLA45_S BMW-745Le" "Bentley-Continental_GT Bentley-Continental_GT" "Bentley-Continental_GT Bentley-Continental_GT" "Audi-TT_RS_Roadster BMW-X3_M_Competition"; }
+    .work--second .work--second--1 {
+      background-position: center;
+      grid-area: Aston_Martin-DBS; }
+      .work--second .work--second--1::before {
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        font-size: .7em; }
+    .work--second .work--second--2 {
+      grid-area: Audi-S4_Avant; }
+      .work--second .work--second--2::before {
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        font-size: .7em; }
+    .work--second .work--second--3 {
+      grid-area: Bentley-Flying_Spur; }
+    .work--second .work--second--4 {
+      grid-area: Lamborghini-Urus; }
+      .work--second .work--second--4::before {
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        font-size: .7em; }
+    .work--second .work--second--5 {
+      grid-area: Porsche-718_Spyder; }
+    .work--second .work--second--6 {
+      grid-area: Porsche-Cayenne_Turbo_Coupe; }
+    .work--second .work--second--7 {
+      grid-area: Mercedes-Benz-GLC63_S; }
+      .work--second .work--second--7::before {
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        font-size: .7em; }
+    .work--second .work--second--8 {
+      grid-area: Mercedes-Benz-CLA45_S; }
+      .work--second .work--second--8::before {
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        font-size: .7em; }
+      .work--second .work--second--8.big::before {
+        font-size: 1em;
+        height: 30px; }
+    .work--second .work--second--9 {
+      grid-area: BMW-745Le; }
+      .work--second .work--second--9::before {
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        font-size: .7em; }
+      .work--second .work--second--9.big::before {
+        font-size: 1em;
+        height: 30px; }
+    .work--second .work--second--10 {
+      grid-area: Audi-TT_RS_Roadster; }
+      .work--second .work--second--10::before {
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        font-size: .7em; }
+      .work--second .work--second--10.big::before {
+        font-size: 1em;
+        height: 30px; }
+    .work--second .work--second--11 {
+      grid-area: Bentley-Continental_GT; }
+    .work--second .work--second--12 {
+      grid-area: BMW-M8_Competition_Coupe; }
+      .work--second .work--second--12::before {
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        font-size: .7em; }
+    .work--second .work--second--13 {
+      grid-area: Porsche-Panamera; }
+      .work--second .work--second--13::before {
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        font-size: .7em; }
+    .work--second .work--second--14 {
+      grid-area: BMW-X3_M_Competition; }
+      .work--second .work--second--14::before {
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        font-size: .7em; }
+      .work--second .work--second--14.big::before {
+        font-size: 1em;
+        height: 30px; }
+  .clients__container {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .clients__container .clients-co-container {
+      height: 100%; }
+      .clients__container .clients-co-container .clients__vertical {
+        height: 10vh;
+        margin-top: 5vh; }
+      .clients__container .clients-co-container .clients__title {
+        text-align: center;
+        font-size: 2em;
+        line-height: 1.5em; }
+      .clients__container .clients-co-container .clients__pics__container {
+        width: 60vw; }
+        .clients__container .clients-co-container .clients__pics__container .clients__pic {
+          width: 7vw;
+          height: 7vw; }
+      .clients__container .clients-co-container .quotes__container {
+        width: 80vw;
+        height: 25vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+      .clients__container .clients-co-container .minor-container {
+        width: 80vw;
+        height: 60vh; }
+        .clients__container .clients-co-container .minor-container .featured {
+          font-size: 1.3em;
+          font-family: "Quicksand", sans-serif;
+          font-weight: 300; }
+        .clients__container .clients-co-container .minor-container .journals__container {
+          width: 80vw;
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around; }
+          .clients__container .clients-co-container .minor-container .journals__container .journal {
+            width: 30vw; }
+  .contact--first {
+    height: 140vh;
+    background-image: url(imgs/e147b659.fb91ea49756d85fa66d32e1960df6f9c.jpg);
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 85vh; }
+    .contact--first .contact__titles__container {
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 5vh 0; }
+      .contact--first .contact__titles__container .contact--first__title--large {
+        width: 90vw;
+        text-align: center; }
+    .contact--first .contact-double-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .contact--first .contact-double-container .contact__form__container {
+        width: 80vw; }
+        .contact--first .contact-double-container .contact__form__container .contact__form {
+          width: 100%;
+          height: 100%; }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container {
+            width: 60vw; }
+      .contact--first .contact-double-container .information__container {
+        width: 80vw; }
+        .contact--first .contact-double-container .information__container .info__container {
+          width: 100%;
+          justify-content: space-around; }
+          .contact--first .contact-double-container .information__container .info__container .info__span {
+            width: 40vw; }
+  .contact--second {
+    height: 85vh; }
+    .contact--second .contact--second__container .contact__sub-container {
+      width: 80vw;
+      height: 15vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around; }
+      .contact--second .contact--second__container .contact__sub-container .artificial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        min-width: 25vw;
+        height: 12vh; }
+        .contact--second .contact--second__container .contact__sub-container .artificial .country__container {
+          width: 100%; }
+    .contact--second .contact--second__container .social__container {
+      width: 40vw; }
+    .contact--second .first--footer {
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+    .contact--second .second--footer {
+      height: 15vh; }
+    .contact--second .third--footer {
+      height: 3vh; } }
+
+@media all and (max-width: 634px) {
+  #home {
+    background-image: url(imgs/aac93b79.43598a4f79e4fd4aa21b7d5783bd1f7c.jpg); }
+    #home .left {
+      display: none; }
+    #home .card .card__vertical {
+      height: 10vh; }
+    #home .card .card--small__title {
+      width: 50vw;
+      text-align: center; }
+    #home .card .card--large__title {
+      font-size: 3.5em; }
+  .about--first {
+    width: 100vw;
+    height: 120vh; }
+    .about--first .container--first {
+      height: 40vh; }
+      .about--first .container--first .about__title--large {
+        font-size: 2em; }
+    .about--first .container--second {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .about--first .container--second .second__sub-container {
+        position: relative;
+        left: 0;
+        transform: translateY(0);
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around; }
+        .about--first .container--second .second__sub-container .about__text {
+          color: #000;
+          font-size: 1em; }
+  .about--second {
+    height: 100vh;
+    background-image: url(imgs/5dd4bf07.037b82e6c361d9c02f2c74e6eb1ee148.jpg);
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5); }
+    .about--second .container--second {
+      width: 70%; }
+  .about--third {
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; }
+    .about--third .third__container--first {
+      height: 70vh; }
+      .about--third .third__container--first .third__title {
+        font-size: 2em; }
+    .about--third .third__container--second {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .about--third .third__container--second .third__sub-container {
+        width: 90vw;
+        height: 25vh; }
+        .about--third .third__container--second .third__sub-container .sub-container__title {
+          font-size: 1.1em; }
+        .about--third .third__container--second .third__sub-container .sub-container__text {
+          font-size: .9em;
+          text-align: center; }
+        .about--third .third__container--second .third__sub-container .graphs--container {
+          height: 18vh;
+          width: 80vw; }
+          .about--third .third__container--second .third__sub-container .graphs--container .graph--container {
+            width: 100%; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph__title {
+              font-size: 0.7em;
+              height: 4vh;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center; }
+            .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph {
+              width: 80vw; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--95::before {
+                font-size: 0.8em; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--85::before {
+                font-size: 0.8em; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--70::before {
+                font-size: 0.8em; }
+              .about--third .third__container--second .third__sub-container .graphs--container .graph--container .graph .content--65::before {
+                font-size: 0.8em; }
+  .services--first {
+    height: 150vh;
+    background-image: url(imgs/d080caec.00172949c5a47b35f3709c470a119a59.jpg); }
+    .services--first .first__title {
+      font-size: 2.5em;
+      margin-bottom: 10vh; }
+    .services--first .first__cards-container {
+      height: 120vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .services--first .first__cards-container .flip-card {
+        width: 80vw;
+        height: 30vh; }
+        .services--first .first__cards-container .flip-card__content .flip-card__front {
+          height: 30vh; }
+        .services--first .first__cards-container .flip-card__content .flip-card__back {
+          height: 30vh; }
+    .services--first .carousel__container {
+      display: none; }
+  .services--second__text {
+    width: 80vw;
+    font-size: 0.9em; }
+  .services--third {
+    height: 140vh;
+    background-image: url(imgs/88514661.5a944082cb77cad79bcd8aa8bb0a8db0.jpg);
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .services--third__container {
+      display: none; }
+    .services--third .main--cont {
+      width: 90vw;
+      height: 21.5vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start; }
+      .services--third .main--cont .left--cont {
+        height: 100%;
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+        .services--third .main--cont .left--cont .pix {
+          height: 5vh; }
+        .services--third .main--cont .left--cont .vert {
+          display: block;
+          width: 1px;
+          height: 15vh;
+          background-color: #DB9F00; }
+      .services--third .main--cont .right--cont {
+        height: 12vh;
+        width: 60vw;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        align-items: flex-start; }
+        .services--third .main--cont .right--cont .right--cont__title {
+          font-family: "Quicksand", sans-serif;
+          text-transform: capitalize; }
+        .services--third .main--cont .right--cont .right--cont__text {
+          font-family: "Quicksand", sans-serif;
+          font-weight: 300; }
+  .work--first {
+    height: 70vh; }
+    .work--first .work--first__title--large {
+      font-size: 2em; }
+    .work--first .work--first__text {
+      font-size: .9em; }
+    .work--first .work--first__list {
+      width: 80vw; }
+  .work--second {
+    height: 700vh;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(14, 1fr);
+    grid-template-areas: "Aston_Martin-DBS" "Audi-S4_Avant" "Bentley-Flying_Spur" "Porsche-Panamera" "Lamborghini-Urus" "Porsche-718_Spyder" "Mercedes-Benz-GLC63_S" "BMW-M8_Competition_Coupe" "Porsche-Cayenne_Turbo_Coupe" "Mercedes-Benz-CLA45_S" "BMW-745Le" "Audi-TT_RS_Roadster" "Bentley-Continental_GT" "BMW-X3_M_Competition"; }
+    .work--second .work--second--1 {
+      background-position: center; }
+      .work--second .work--second--1::before {
+        font-size: 1em;
+        height: 30px; }
+    .work--second .work--second--2::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--3::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--4::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--5::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--6::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--7::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--8::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--9::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--10::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--11::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--12::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--13::before {
+      font-size: 1em;
+      height: 30px; }
+    .work--second .work--second--14::before {
+      font-size: 1em;
+      height: 30px; }
+  .clients__container {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .clients__container .clients-co-container {
+      height: 100%; }
+      .clients__container .clients-co-container .clients__vertical {
+        height: 10vh;
+        margin-top: 5vh; }
+      .clients__container .clients-co-container .clients__title {
+        text-align: center;
+        font-size: 2em;
+        line-height: 1.5em; }
+      .clients__container .clients-co-container .clients__pics__container {
+        width: 80vw;
+        margin-bottom: 4vh; }
+        .clients__container .clients-co-container .clients__pics__container .clients__pic {
+          width: 10vw;
+          height: 10vw; }
+      .clients__container .clients-co-container .quotes__container {
+        width: 80vw;
+        height: 25vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+      .clients__container .clients-co-container .minor-container {
+        width: 80vw;
+        height: 60vh; }
+        .clients__container .clients-co-container .minor-container .featured {
+          font-size: 1.8em; }
+        .clients__container .clients-co-container .minor-container .journals__container {
+          width: 80vw;
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around; }
+          .clients__container .clients-co-container .minor-container .journals__container .journal {
+            width: 30vw; }
+  .contact--first {
+    height: 140vh;
+    background-image: url(imgs/e147b659.fb91ea49756d85fa66d32e1960df6f9c.jpg);
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 85vh; }
+    .contact--first .contact__titles__container {
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 5vh 0; }
+      .contact--first .contact__titles__container .contact--first__title--large {
+        width: 90vw;
+        text-align: center; }
+    .contact--first .contact-double-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .contact--first .contact-double-container .contact__form__container {
+        width: 80vw; }
+        .contact--first .contact-double-container .contact__form__container .contact__form {
+          width: 100%;
+          height: 100%; }
+          .contact--first .contact-double-container .contact__form__container .contact__form .input__container {
+            width: 60vw; }
+      .contact--first .contact-double-container .information__container {
+        width: 80vw; }
+        .contact--first .contact-double-container .information__container .info__container {
+          width: 100%;
+          justify-content: space-around; }
+          .contact--first .contact-double-container .information__container .info__container .info__span {
+            width: 40vw; }
+  .contact--second {
+    height: 85vh; }
+    .contact--second .contact--second__container .contact__sub-container {
+      width: 80vw;
+      height: 16vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around; }
+      .contact--second .contact--second__container .contact__sub-container .artificial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        min-width: 25vw;
+        height: 12vh; }
+        .contact--second .contact--second__container .contact__sub-container .artificial .country__container {
+          width: 100%; }
+    .contact--second .contact--second__container .social__container {
+      width: 40vw; }
+    .contact--second .first--footer {
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+    .contact--second .second--footer {
+      height: 15vh; }
+    .contact--second .third--footer {
+      height: 3vh; } }
+</style></head>
+<body>
+    <!-- navigation -->
+    <nav class="header__nav">
+        <!-- branding -->
+        <ul class="nav__list--brand">
+            <li class="nav__item"><img class="nav__img" src="./Aztec __ Dealership_files/wheel.1cc032a3f23d45fda8f5131bf2216fa7.svg" alt="" style="transform: rotate(0deg);"></li>
+            <li class="nav__item"><a class="nav__link" href="http://localhost:8081/#">AZTEC</a></li>
+        </ul>
+        <!-- actual navigation -->
+        <ul class="nav__list--navigation">
+            <li class="nav__item active"><a class="nav__link smooth" href="http://localhost:8081/#home">home</a></li>
+            <li class="nav__item"><a class="nav__link smooth" href="http://localhost:8081/#about">about</a></li>
+            <li class="nav__item"><a class="nav__link smooth" href="http://localhost:8081/#services">services</a></li>
+            <li class="nav__item"><a class="nav__link smooth" href="http://localhost:8081/#work">work</a></li>
+            <li class="nav__item"><a class="nav__link smooth" href="http://localhost:8081/#clients">clients</a></li>
+            <li class="nav__item"><a class="nav__link smooth" href="http://localhost:8081/#contact">contacts</a></li>
+        </ul>
+        <!-- menu icon -->
+        <div class="nav__menu-icon__container">
+            <img src="./Aztec __ Dealership_files/menu-three-lines-button-interface-symbol.a350660d2f3298175d2d11e52b8fbe63.svg" alt="menu icon" class="nav__menu-icon">
+        </div>
+    </nav>
+    <!-- home section -->
+    <section id="home" style="background-color: rgba(0, 0, 0, 0.5);">
+        <!-- left part -->
+        <div class="left">
+            <ul class="left__list">
+                <li class="left__item stripe string active-sideBar" style="">01</li>
+                <li class="left__item left__behind active-sideBar" style="">creative</li>
+            </ul>
+            <ul class="left__list">
+                <li class="left__item stripe" style="">02</li>
+                <li class="left__item left__behind" style="">quality</li>
+            </ul>
+            <ul class="left__list">
+                <li class="left__item stripe" style="">03</li>
+                <li class="left__item left__behind" style="">concept</li>
+            </ul>
+        </div>
+        <!-- first card -->
+        <div class="card card-is-shown" style="transform: perspective(12rem) rotate3d(0.69, 1.26, 0, 1deg);">
+            <span class="card__vertical" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+            <h5 class="card--small__title card__text" style="opacity: 1;">explore new concept worlds</h5>
+            <h1 class="card--large__title card__text" style="opacity: 1;">groundbreaking technology</h1>
+            <span class="card__vertical" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+            <button class="card__button" style="opacity: 1;">amazing aztec</button>
+        </div>
+        <!-- second card -->
+        <div class="card">
+            <span class="card__vertical"></span>
+            <h5 class="card--small__title card__text">Lorem ipsum dolor sit.</h5>
+            <h1 class="card--large__title card__text">experience creative freedom </h1>
+            <span class="card__vertical"></span>
+            <button class="card__button">amazing aztec</button>
+        </div>
+        <!-- third card -->
+        <div class="card">
+            <span class="card__vertical"></span>
+            <h3 class="card--small__title card__text">Lorem ipsum dolor sit amet.</h3>
+            <h1 class="card--large__title card__text">quality web presentations</h1>
+            <span class="card__vertical"></span>
+            <button class="card__button">amazing aztec</button>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about--first">
+            <div class="container--first">
+                <span class="about__vertical"></span>
+                <h5 class="about__title--small">we are aztec</h5>
+                <h1 class="about__title--large">about us</h1>
+            </div>
+            <div class="container--second">
+                <div class="second__sub-container absolute--first" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <img class="about__svg" src="./Aztec __ Dealership_files/menu.8581a7a86997895ffafa7c85d81b7d84.svg" alt="">
+                    <span class="about__text">choose your perfect car</span>
+                </div>
+                <div class="second__sub-container absolute--second" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <img class="about__svg" src="./Aztec __ Dealership_files/analytics.88f19bee40a5c0832a28f98a95e82048.svg" alt="">
+                    <span class="about__text">compare your offers</span>
+                </div>
+                <div class="second__sub-container absolute--third" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <img class="about__svg" src="./Aztec __ Dealership_files/shopping-bag.037349b5263139c642eded381197f02c.svg" alt="">
+                    <span class="about__text">buy with confidence</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="about--second">
+            <div class="container--second">
+                <h1 class="second__title">we work hard</h1>
+                <p class="second__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias inventore amet magni ex natus repellendus, nihil corrupti fugiat accusamus nostrum molestiae explicabo illum exercitationem delectus mollitia dolorem, quos, maxime quibusdam?</p>
+                <p class="second__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, consequuntur numquam minima sint deserunt voluptatum. Rem deserunt ducimus impedit eligendi.</p>
+                <button class="second__btn btn">outstanding features</button>
+            </div>
+        </div>
+
+        <div class="about--third">
+            <div class="third__container--first">
+                <h1 class="third__title">“ WHAT SEPARATES DESIGN FROM ART IS THAT DESIGN IS MEANT TO BE… FUNCTIONAL ”</h1>
+                <span class="third__span">– Cameron Moll</span>
+            </div>
+            <div class="third__container--second">
+                <div class="third__sub-container">
+                    <h3 class="sub-container__title">OUR VALUES</h3>
+                    <p class="sub-container__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis ducimus in dolorem harum ipsam. Vitae ipsa delectus perspiciatis aliquid. Cupiditate, voluptatibus aliquid laboriosam deserunt natus libero facilis dolores! Quisquam iste provident explicabo distinctio qui odio exercitationem eaque sunt suscipit porro iure dolore, doloribus aliquam, quis nostrum corrupti. Adipisci, inventore.
+                    </p>
+                </div>
+                <div class="third__sub-container">
+                    <h3 class="sub-container__title">our mission</h3>
+                    <p class="sub-container__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis ducimus in dolorem harum ipsam. Vitae ipsa delectus perspiciatis aliquid. Cupiditate, voluptatibus aliquid laboriosam deserunt natus libero facilis dolores! Quisquam iste provident explicabo distinctio qui odio exercitationem eaque sunt suscipit porro iure dolore, doloribus aliquam, quis nostrum corrupti. Adipisci, inventore.
+                    </p>
+                </div>
+                <div class="third__sub-container">
+                    <h3 class="sub-container__title">our skill</h3>
+                    <div class="graphs--container">
+                        <div class="graph--container">
+                            <h5 class="graph__title">development</h5>
+                            <div class="graph">
+                                <div class="content--95 show-before" style="transform-origin: left 50% 0px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                            </div>
+                        </div>
+                        <div class="graph--container">
+                            <h5 class="graph__title">design</h5>
+                            <div class="graph">
+                                <div class="content--85 show-before" style="transform-origin: left 50% 0px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                            </div>
+                        </div>
+                        <div class="graph--container">
+                            <h5 class="graph__title">marketing</h5>
+                            <div class="graph">
+                                <div class="content--70 show-before" style="transform-origin: left 50% 0px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                            </div>
+                        </div>
+                        <div class="graph--container">
+                            <h5 class="graph__title">consulting</h5>
+                            <div class="graph">
+                                <div class="content--65 show-before" style="transform-origin: left 50% 0px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="services--first">
+            <h1 class="first__title">why choose us?</h1>
+            <!-- for lg & sm -->
+            <div class="first__cards-container">
+                <div class="flip-card">
+                    <div class="flip-card__content">
+                        <div class="flip-card__front">
+                            <h3 class="flip-card__title">the flip</h3>
+                            <p class="flip-card__subtitle">its so funny</p>
+                        </div>
+                        <div class="flip-card__back">
+                            <p class="flip-card__back__content">hello this is so intelligent and interesting</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card__content">
+                        <div class="flip-card__front">
+                            <h3 class="flip-card__title">the flip</h3>
+                            <p class="flip-card__subtitle">its so funny</p>
+                        </div>
+                        <div class="flip-card__back">
+                            <p class="flip-card__back__content">hello this is so intelligent and interesting</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card__content">
+                        <div class="flip-card__front">
+                            <h3 class="flip-card__title">the flip</h3>
+                            <p class="flip-card__subtitle">its so funny</p>
+                        </div>
+                        <div class="flip-card__back">
+                            <p class="flip-card__back__content">hello this is so intelligent and interesting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- for md -->
+            <div class="carousel__container">
+                <div class="carousel__slider" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="slide">
+                        <div class="flip-card">
+                            <div class="flip-card__content">
+                                <div class="flip-card__front">
+                                    <h3 class="flip-card__title">the flip</h3>
+                                    <p class="flip-card__subtitle">its so funny</p>
+                                </div>
+                                <div class="flip-card__back">
+                                    <p class="flip-card__back__content">hello this is so intelligent and interesting</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="flip-card">
+                            <div class="flip-card__content">
+                                <div class="flip-card__front">
+                                    <h3 class="flip-card__title">the flip</h3>
+                                    <p class="flip-card__subtitle">its so funny</p>
+                                </div>
+                                <div class="flip-card__back">
+                                    <p class="flip-card__back__content">hello this is so intelligent and interesting</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="flip-card">
+                            <div class="flip-card__content">
+                                <div class="flip-card__front">
+                                    <h3 class="flip-card__title">the flip</h3>
+                                    <p class="flip-card__subtitle">its so funny</p>
+                                </div>
+                                <div class="flip-card__back">
+                                    <p class="flip-card__back__content">hello this is so intelligent and interesting</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btnNext" type="button"><img class="arr" src="./Aztec __ Dealership_files/up-arrow.1703a0922480ef4d96c63ef1f7392d12.svg" alt=""></button>
+                <button class="btnPrev" type="button"><img class="arr" src="./Aztec __ Dealership_files/down-arrow.0c64592028b913030c45768863749689.svg" alt=""></button>
+            </div>
+        </div>
+
+        <div class="services--second">
+            <h1 class="services--second__title">Pre-Sale Questions</h1>
+            <p class="services--second__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nihil animi inventore aspernatur quidem fugiat repudiandae deleniti minus, eum repellendus.</p>
+            <button class="services--second__button btn">contact us</button>
+        </div>
+        <!-- for lg -->
+        <div class="services--third">
+            <div class="services--third__container">
+                <img src="./Aztec __ Dealership_files/wheel.1cc032a3f23d45fda8f5131bf2216fa7.svg" alt="" class="services--third__wheel" style="transform: matrix(-0.93969, -0.34202, 0.34202, -0.93969, 0, 0);">
+                <img src="./Aztec __ Dealership_files/circle.f40a0f9483c16b4705b7e54880913d86.svg" alt="" class="services--third__circle">
+                <div class="inside__circle">
+                    <div class="inside__circle__container shown_container" style="opacity: 1;">
+                        <h1 class="inside__circle__title">100% Mobile Ready</h1>
+                        <span class="inside__circle__text">Lorem ipsum dolor, sit amet consectetur adipisicing.</span>
+                    </div>
+                    <div class="inside__circle__container">
+                        <h1 class="inside__circle__title">Award Winning</h1>
+                        <span class="inside__circle__text">Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+                    </div>
+                    <div class="inside__circle__container">
+                        <h1 class="inside__circle__title">New Technology</h1>
+                        <span class="inside__circle__text">Lorem ipsum dolor sit amet.</span>
+                    </div>
+                    <div class="inside__circle__container">
+                        <h1 class="inside__circle__title">Done Awesomely</h1>
+                        <span class="inside__circle__text">Lorem ipsum dolor sit.</span>
+                    </div>
+                    <div class="inside__circle__container">
+                        <h1 class="inside__circle__title">Ultimate Solution</h1>
+                        <span class="inside__circle__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                    <div class="inside__circle__container">
+                        <h1 class="inside__circle__title">Brand New Features</h1>
+                        <span class="inside__circle__text">Lorem ipsum dolor sit amet consectetur.</span>
+                    </div>
+                </div>
+                <img class="wheel__svg" src="./Aztec __ Dealership_files/floating-balloons.a45eba62fc0e2f95f181e00df617b721.svg" alt="" style="transform: matrix(1, 0, 0, 1, 220, -120);">
+                <img class="wheel__svg" src="./Aztec __ Dealership_files/headphone-symbol.cf807b933a9c76854ea4f4887410727c.svg" alt="" style="transform: matrix(1, 0, 0, 1, 0, -250);">
+                <img class="wheel__svg" src="./Aztec __ Dealership_files/icon.534e8ba1ddd66ed2220d5fec1cce3bf8.svg" alt="" style="transform: matrix(1, 0, 0, 1, -220, -120);">
+                <img class="wheel__svg" src="./Aztec __ Dealership_files/multiple-users-silhouette.8d12bb5d8912124dfec6274c6d09713f.svg" alt="" style="transform: matrix(1, 0, 0, 1, -220, 120);">
+                <img class="wheel__svg" src="./Aztec __ Dealership_files/settings-gears.bfe85f7c2c6fad32ac78d739c38132ef.svg" alt="" style="transform: matrix(1, 0, 0, 1, 0, 250);">
+                <img class="wheel__svg" src="./Aztec __ Dealership_files/umbrella.c54a8da592729d09d2a6c45c85904ade.svg" alt="" style="transform: matrix(1, 0, 0, 1, 220, 120);">
+            </div>
+            <!-- for sm -->
+            <div class="main--cont">
+                <div class="left--cont">
+                    <img class="pix" src="./Aztec __ Dealership_files/floating-balloons.a45eba62fc0e2f95f181e00df617b721.svg" alt="">
+                    <span class="vert"></span>
+                </div>
+                <div class="right--cont">
+                    <h4 class="right--cont__title">100% mobile Ready</h4>
+                    <p class="right--cont__text">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+            <div class="main--cont">
+                <div class="left--cont">
+                    <img class="pix" src="./Aztec __ Dealership_files/headphone-symbol.cf807b933a9c76854ea4f4887410727c.svg" alt="">
+                    <span class="vert"></span>
+                </div>
+                <div class="right--cont">
+                    <h4 class="right--cont__title">award Winning</h4>
+                    <p class="right--cont__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="main--cont">
+                <div class="left--cont">
+                    <img class="pix" src="./Aztec __ Dealership_files/icon.534e8ba1ddd66ed2220d5fec1cce3bf8.svg" alt="">
+                    <span class="vert"></span>
+                </div>
+                <div class="right--cont">
+                    <h4 class="right--cont__title">new technology</h4>
+                    <p class="right--cont__text">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="main--cont">
+                <div class="left--cont">
+                    <img class="pix" src="./Aztec __ Dealership_files/multiple-users-silhouette.8d12bb5d8912124dfec6274c6d09713f.svg" alt="">
+                    <span class="vert"></span>
+                </div>
+                <div class="right--cont">
+                    <h4 class="right--cont__title">done awesomely</h4>
+                    <p class="right--cont__text">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="main--cont">
+                <div class="left--cont">
+                    <img class="pix" src="./Aztec __ Dealership_files/settings-gears.bfe85f7c2c6fad32ac78d739c38132ef.svg" alt="">
+                    <span class="vert"></span>
+                </div>
+                <div class="right--cont">
+                    <h4 class="right--cont__title">ultimate solution</h4>
+                    <p class="right--cont__text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                </div>
+            </div>
+            <div class="main--cont">
+                <div class="left--cont">
+                    <img class="pix" src="./Aztec __ Dealership_files/umbrella.c54a8da592729d09d2a6c45c85904ade.svg" alt="">
+                    <span class="vert"></span>
+                </div>
+                <div class="right--cont">
+                    <h4 class="right--cont__title">Brand New Features</h4>
+                    <p class="right--cont__text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="work">
+        <div class="work--first">
+            <span class="work--first__vertical"></span>
+            <h5 class="work--first__title--small">WE BUILD GOOD STUFF</h5>
+            <h1 class="work--first__title--large">OUR PORTFOLIO</h1>
+            <p class="work--first__text">Assertively impact bricks-and-clicks outsourcing after mission-critical ROI. Monotonectally underwhelm cost effective convergence without granular alignments. Progressively create client-based platforms.</p>
+            <ul class="work--first__list">
+                <li class="work--first__item extend">all</li>
+                <li class="work--first__item">grand tourer</li>
+                <li class="work--first__item">SUVs</li>
+                <li class="work--first__item">states</li>
+                <li class="work--first__item">limosins</li>
+                <li class="work--first__item">convertibles</li>
+            </ul>
+        </div>
+        <div class="work--second">
+            <div class="work--second--1 grand-tourer"></div>
+            <div class="work--second--2 state"></div>
+            <div class="work--second--3 limo"></div>
+            <div class="work--second--4 suv"></div>
+            <div class="work--second--5 convertible"></div>
+            <div class="work--second--6 suv"></div>
+            <div class="work--second--7 suv"></div>
+            <div class="work--second--8 state"></div>
+            <div class="work--second--9 limo"></div>
+            <div class="work--second--10 convertible"></div>
+            <div class="work--second--11 grand-tourer"></div>
+            <div class="work--second--12 grand-tourer"></div>
+            <div class="work--second--13 state"></div>
+            <div class="work--second--14 suv"></div>
+        </div>
+    </section>
+    <section id="clients">
+        <div class="clients__container">
+            <div class="clients-co-container">
+                <span class="clients__vertical"></span>
+                <h1 class="clients__title">OUR CLIENTS FEEDBACK</h1>
+                <div class="clients__pics__container">
+                    <img class="clients__pic" src="./Aztec __ Dealership_files/Webp.net-resizeimage (1).2c948deb1ff43a1027d35e74a8b57ccd.jpg" alt="">
+                    <img class="clients__pic" src="./Aztec __ Dealership_files/Webp.net-resizeimage (2).18e34323457f281bc433eeecc8400124.jpg" alt="">
+                    <img class="clients__pic" src="./Aztec __ Dealership_files/Webp.net-resizeimage (3).978145955eabc7f835996c2b31c5e90a.jpg" alt="">
+                    <img class="clients__pic" src="./Aztec __ Dealership_files/Webp.net-resizeimage copy 2.f445723e1c3a395f7b9c4be601d0b021.jpg" alt="">
+                    <img class="clients__pic" src="./Aztec __ Dealership_files/Webp.net-resizeimage copy.e270ef9b0097e6346f0fa14ec5b20423.jpg" alt="">
+                    <img class="clients__pic" src="./Aztec __ Dealership_files/Webp.net-resizeimage.c80d93e33e660cf9e2a61556db42520b.jpg" alt="">
+                </div>
+                <div class="quotes__container">
+                    <p class="quotes">Dynamically whiteboard timely models through bricks-and-clicks e-services. Holisticly predominate resource maximizing users through backend leadership skills. Continually mesh team building strategic theme areas without standards compliant users. Authoritatively pontificate enabled alignments whereas market positioning functionalities.</p>
+                    <p class="quotes fade-away">Intrinsicly embrace top-line core competencies with real-time metrics. Conveniently reinvent functionalized collaboration</p>
+                    <p class="quotes fade-away">Credibly envisioneer enterprise-wide content before resource maximizing leadership skills. Progressively visualize professional value via distributed value. Efficiently restore adaptive bandwidth through best-of-breed outsourcing. Appropriately redefine professional sources with extensible strategic theme areas. Progressively exploit plug-and-play ROI and excellent platforms</p>
+                    <p class="quotes fade-away">Compellingly e-enable distributed deliverables whereas customer directed vortals. Objectively pontificate leveraged collaboration and idea-sharing without bleeding-edge resources. Professionally administrate business web services without future-proof catalysts for change. Energistically engage diverse vortals and prospective methods of empowerment. Competently pontificate diverse</p>
+                    <p class="quotes fade-away">Enthusiastically syndicate inexpensive services and 24/7 bandwidth. Phosfluorescently develop cooperative content vis-a-vis best-of-breed alignments. Competently innovate orthogonal e-tailers via interactive core competencies. Uniquely implement transparent</p>
+                    <p class="quotes fade-away">Rapidiously integrate multimedia based resources whereas low-risk high-yield technologies. Proactively innovate market positioning products without B2B products. Progressively recaptiualize</p>
+                </div>
+                <div class="names__container">
+                    <span class="name">SUSONE MOE</span>
+                    <span class="name fade-away">MARIA DOE</span>
+                    <span class="name fade-away">SONI MARVEL </span>
+                    <span class="name fade-away">JOTAS DOE</span>
+                    <span class="name fade-away">VAL DRACA</span>
+                    <span class="name fade-away">MARIA LUCAS</span>
+                </div>
+                <div class="minor-container">
+                    <span class="featured">as featured on :</span>
+                    <div class="journals__container">
+                        <img class="journal" src="./Aztec __ Dealership_files/the_guardian_light-2d9672e70efc141441a93f39fc155873729e2b9fe28c22d5afce11fae1f72023.48cbd9d1b7d8bfa16d4b6559e63d9013.svg" alt="">
+                        <img class="journal" src="./Aztec __ Dealership_files/the_independent_light-52e872697501c333e1817648b511e80f840907e276fce0670fe5d38fdadcbafe.839cd8aaf5ce9674491b2a36f818afdf.svg" alt="">
+                        <img class="journal" src="./Aztec __ Dealership_files/the_telegraph_light-184b79e9d5a9b0a86f00379c9ea26b1e327ef2e677d6611d30211647b9167c0f.2107295590827c7b021df9def963cce0.svg" alt="">
+                        <img class="journal" src="./Aztec __ Dealership_files/the_financial_times_light-e3926e9f2ad14012385954964c4295be2a9872291ec10e7abed43fbd0285073f.fa4bae2c690db0ca02ca2cd20b1e8ceb.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact--first">
+            <div class="contact__titles__container">
+                <h6 class="contact--first__title--small">We would love to know you</h6>
+                <h1 class="contact--first__title--large">GET IN TOUCH WITH US</h1>
+            </div>
+            <div class="contact-double-container">
+                <div class="information__container">
+                    <div class="info__container">
+                        <img class="info__svg" src="./Aztec __ Dealership_files/call.a20e5b6c49b69e1c5d428b765892ea4e.svg" alt="">
+                        <span class="info__span">(+44) 239 121 332</span>
+                    </div>
+                    <div class="info__container">
+                        <img class="info__svg" src="./Aztec __ Dealership_files/map-localization.821430f20e8f7027023cec4221d2783e.svg" alt="">
+                        <span class="info__span">PO Box 16122 Collins Street West Victoria 8007 Australia</span>
+                    </div>
+                    <div class="info__container">
+                        <img class="info__svg" src="./Aztec __ Dealership_files/email-filled-closed-envelope.58ff2a5acfbd2d17f38da2bc577c0d05.svg" alt="">
+                        <span class="info__span">hello@example.com<br>job@example.com</span>
+                    </div>
+                </div>
+                <div class="contact__form__container">
+                    <form action="http://localhost:8081/#" method="get" name="form" class="contact__form">
+                        <div class="input__container">
+                            <input type="text" name="Name" id="name" class="input">
+                            <label for="name" class="label">Name</label>
+                        </div>
+                        <div class="input__container">
+                            <input type="email" name="email" id="email" class="input">
+                            <label for="email" class="label">email</label>
+                        </div>
+                        <div class="input__container">
+                            <input type="text" name="subject" id="subject" class="input">
+                            <label for="subject" class="label">subject</label>
+                        </div>
+                        <div class="input__container">
+                            <input type="text" name="message" id="message" class="input">
+                            <label for="message" class="label">message</label>
+                        </div>
+                        <div class="submit__container">
+                            <button type="submit" class="submit btn" style="background-color: rgba(255, 255, 255, 0); box-shadow: rgb(219, 159, 0) 0px 0px 0px 0px;">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact--second">
+            <div class="contact--second__container first--footer">
+                <div class="contact__sub-container">
+                    <div class="artificial">
+                        <div class="span__container--3x">
+                            <span class="contact--second__span">Help and support</span>
+                            <span class="contact--second__span--light">Mon-Fri 8:00 - 19:00</span>
+                            <span class="contact--second__span--light">Sat-Sun 9:00 - 17:30</span>
+                        </div>
+                        <span class="contact--second__span">Call: 0800 808 5885</span>
+                    </div>
+                    <div class="artificial">
+                        <span class="contact--second__span">Text: 0753 302 5324</span>
+                        <div class="span__container--2x">
+                            <span class="contact--second__span">Email: help@carwow.co.uk</span>
+                            <span class="contact--second__span--light">Response time usually 4 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__sub-container">
+                    <div class="artificial">
+                        <span class="contact--second__span">about us</span>
+                        <span class="contact--second__span">how it works</span>
+                        <span class="contact--second__span">team</span>
+                    </div> 
+                    <div class="artificial">   
+                    <span class="contact--second__span">press</span>
+                    <span class="contact--second__span">careers</span>
+                    <span class="contact--second__span">for dealers</span>
+                    </div>
+                </div>
+                <div class="contact__sub-container">
+                    <div class="artificial">
+                        <span class="contact--second__span">new car deals</span>
+                        <span class="contact--second__span">sell my car</span>
+                        <span class="contact--second__span">car reviews</span>
+                    </div> 
+                    <div class="artificial">
+                        <span class="contact--second__span">car chooser</span>
+                        <span class="contact--second__span">blog</span>
+                        <span class="contact--second__span">news</span>
+                    </div>
+                </div>
+                <div class="contact__sub-container">
+                    <span class="contact--second__span">Rated 9.4/10 from 17,616 reviews</span>
+                    <div class="artificial">
+                        <div class="country__container">
+                            <img class="country-flag" src="./Aztec __ Dealership_files/england.942f27f1f6c9f82f2abf00988dcda901.svg" alt="">
+                            <span class="contact--second__span--light">English</span>
+                        </div>
+                        <div class="country__container">
+                            <img class="country-flag" src="./Aztec __ Dealership_files/germany.d8277b2a94c5ddee377bf030ac800662.svg" alt="">
+                            <span class="contact--second__span--light">Germany</span>
+                        </div>
+                        <div class="country__container">
+                            <img class="country-flag" src="./Aztec __ Dealership_files/spain.7b6d1881becf7096857fdd8feeb3de54.svg" alt="">
+                            <span class="contact--second__span--light">Spain</span>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="contact--second__container second--footer">
+                <h1 class="brand">aztec</h1>
+                <div class="social__container">
+                    <img class="social-icon" src="./Aztec __ Dealership_files/facebook-letter-logo.940e7676e139eb42ebf611f7a14bfff5.svg" alt="">
+                    <img class="social-icon" src="./Aztec __ Dealership_files/twitter-logo-silhouette.9d67ae021656bc676ff37df037ccbf4e.svg" alt="">
+                    <img class="social-icon" src="./Aztec __ Dealership_files/linkedin-logo.8220d48085242e88ff8450680fdd8f7e.svg" alt="">
+                    <img class="social-icon" src="./Aztec __ Dealership_files/google-plus.8feb002b182488a761eafd1f4d469686.svg" alt="">
+                    <img class="social-icon" src="./Aztec __ Dealership_files/vimeo-logo.9aa5a36f19c1d6328342445f86a6e4e0.svg" alt="">
+                    <img class="social-icon" src="./Aztec __ Dealership_files/dribbble-logo.a09b1bcd12f4b53b4ef749cfaa06de96.svg" alt="">
+                </div>
+            </div>
+            <div class="contact--second__container third--footer">
+                <span class="contact--second__span--light">© 2019 Aztec Ltd. All rights reserved</span>
+            </div>
+        </div>
+    </section>
+<script type="text/javascript" src="./Aztec __ Dealership_files/vendor.bundle.js"></script><script type="text/javascript" src="./Aztec __ Dealership_files/main.bundle.js"></script>
+</body></html>

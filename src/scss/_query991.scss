@@ -1,0 +1,674 @@
+
+
+@media all and (max-width: 991px) {
+    .header__nav{
+        .nav__list--navigation{
+            opacity : 0;
+            background-color :#fff;
+            position: absolute;
+            width: 90vw;
+            height: 40vh;
+            top: 10vh;
+            left: 5vw;
+            right : 5vw;
+            @include flex(column,space-between);
+            transform : translateY(0);
+            pointer-events: none;
+            transition : transform 500ms ease-out,
+            opacity 500ms ease-out;
+            border-radius : 2px;
+            box-shadow : 0px 0px 3px -1px #000;
+            .nav__item{
+                .nav__link.bold{
+                    border-top : dotted 1px color(gold); 
+                    border-bottom : dotted 1px color(gold); 
+                }
+            }
+        }
+        .nav__list--navigation.sheet{
+            opacity : 1;
+            transform : translateY(-2vh);
+            pointer-events: all;
+        }
+        .nav__menu-icon__container{
+            
+            position: relative;
+            cursor: pointer;
+            margin-right: 2vw;
+            
+
+            .nav__menu-icon{
+                display: block;
+                height: 5vh;
+            }
+
+            &::before,&::after{
+                display: block;
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                left: 0;
+                background-color: color(gold);
+                transform: scaleX(0);
+                transition : transform 300ms ease-out;
+            }
+
+            &::after{
+                top: 5px;
+            }
+
+            &::before{
+                bottom: 5px;
+            }
+
+            &.burger::after,&.burger::before{
+                transform: scaleX(1);
+            }
+        }
+
+    }
+
+
+    #home{
+        .left{
+            width: 8vw;
+        }
+        .card{
+            .card__vertical{
+                height: 12vh;
+            }
+            .card--small__title{
+                font-size: .9em;
+            }
+            .card--large__title{
+                font-size: 4em;
+            }
+        }
+    }
+
+
+    .about--second{
+        height: 100vh;
+        background-blend-mode: multiply;
+        background-image: url(../img/5dd4bf07.jpg);
+        background-color: rgba(0,0,0,.5);
+        background-position: bottom;
+        .container--second{
+            width: 70%;
+        }
+    }
+
+    .about--third{
+        height: 130vh;
+        @include flex(column,flex-start);
+        .third__container--first{
+            height: 70vh;
+            .third__title{
+                font-size: 2.5em;
+            }
+        }
+        .third__container--second{
+            height: 50vh;
+            width: 95vw;
+            @include flex(row,space-around);
+            .third__sub-container{
+                width: 30vw;
+                height: 50vh;
+                padding : 0 2vw;
+                box-shadow : 0px 0px 3px -1px color(gold);
+                border-radius: 2px;
+                &:last-child{
+                    height: 30vh;
+                }
+                .sub-container__title{
+                    font-size: 1.1em;
+                    width: 100%;
+                    text-align: center;
+                }
+                .sub-container__text{
+                    font-size: .8em;
+                    text-align: center;
+                }
+                .graphs--container{
+                    height: 20vh;
+                    width: 25vw;
+                    .graph--container{
+                        width: 100%;
+                        .graph__title{
+                            font-size: 0.7em;
+                            height: 4vh;
+                            @include flex(column,center);
+                        }
+                        .graph{
+                            width: 25vw;
+                            .content--95{
+                                &::before{ font-size : 0.8em; }
+                            }
+                            .content--85{
+                                &::before{ font-size : 0.8em; }
+                            }
+                            .content--70{
+                                &::before{ font-size : 0.8em; }
+                            }
+                            .content--65{
+                                &::before{ font-size : 0.8em; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .services--first{
+        height: 100vh;
+        background-image: url(../img/d080caec.jpg);
+        background-size : cover;
+        @include flex(column,space-around);
+        .first__title{
+            font-size: 2.5em;
+            margin-top: 2vh;
+        }
+        .first__cards-container{
+            display: none;
+        }
+
+        .carousel__container{
+            display: block;
+            width: 80vw;
+            height: 70vh;
+            overflow: hidden;
+            position: relative;
+            .carousel__slider{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .slide{
+                    width: 100%;
+                    height: 100%;
+                    @include flex(row,center);
+                    .flip-card{
+                        width: 60vw;
+                        height: 40vh;
+                        &__content{
+                            text-align: center;
+                            position: relative;
+                            transform-style: preserve-3d;
+                            .flip-card__front{
+                                @include flip-card-sides;
+                                height: 40vh;
+                                &::before{
+                                    content:"";
+                                    position: absolute;
+                                    top:1em;
+                                    left: 1em;
+                                    right: 1em;
+                                    bottom: 1em;
+                                    border: 2px solid color(gold);
+                                    transform : translateZ(3rem);
+                                }
+                                .flip-card__title{
+                                    transform : translateZ(5rem);
+                                    font-family: $typical;
+                                    text-transform: uppercase;
+                                }
+                                .flip-card__subtitle{
+                                    transform:translateZ(3rem);
+                                    font-family: $typical;
+                                }
+                            }
+                            .flip-card__back{
+                                @include flip-card-sides;
+                                transform : rotateY(180deg);
+                                height: 40vh;
+                                .flip-card__back__content{
+                                    transform: translateZ(5rem);
+                                    font-family: $typical;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btnNext{
+               @include carouselBtn;
+               top:0;
+            }
+
+            .btnPrev{
+                @include carouselBtn; 
+                bottom : 0;
+            }
+
+            .arr{
+                height: 50px;
+            }
+        }
+    }
+
+    .services--third{
+        width: 100vw;
+        height: 85vh;
+        background-image: url(../img/Mercedes-Benz-GLC63_S_AMG_Coupe-2020-1600-5b.jpg);
+        background-size : cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        background-color : rgba(0,0,0,0.2);
+        @include flex(row,center);
+        &__container{
+            height: 85vh;
+            width: 60vw;
+            @include flex(row,center);
+            position: relative;
+            .services--third__wheel{
+                height: 300px;
+            }
+            .services--third__circle{
+                position: absolute;
+                height: 500px;
+                opacity: 0.5;
+            }
+            .inside__circle{
+                position: absolute;
+                width: 220px;
+                height: 220px;
+                background-color : color(lightGrey);
+                clip-path: circle(110px);
+                -webkit-clip-path: circle(110px);
+                z-index : 5;
+                @include flex(row,center);
+                &__container{
+                    position: absolute;
+                    text-align: center;
+                    width: 200px;
+                    height: 120px;
+                    @include flex(column,space-around);
+                    opacity:0;
+                    .inside__circle__title{
+                        font-family: $typical;
+                        font-size: 1.1em;
+                    }
+                    .inside__circle__text{
+                        @include font-light;
+                        font-size: .8em;
+                    }
+                }
+            }
+            .wheel__svg{
+                position: absolute;
+                height: 50px;
+                cursor: pointer;
+            }
+        }
+        .main--cont{
+            display: none;
+        }
+    }
+
+
+    .work--first{
+        height: 70vh;
+        .work--first__vertical{}
+        .work--first__title--small{}    
+        .work--first__title--large{
+            font-size: 2em;
+        }
+        .work--first__text{
+            font-size: .9em;
+        }
+        .work--first__list{
+            width: 65vw;
+            .work--first__item{}
+        }
+    }
+
+
+    .work--second{
+        height: 520vh;
+        width: 100vw;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(13,1fr);
+        grid-template-areas:
+        "Aston_Martin-DBS Audi-S4_Avant"
+        "Bentley-Flying_Spur Bentley-Flying_Spur"
+        "Bentley-Flying_Spur Bentley-Flying_Spur"
+        "Porsche-Panamera Lamborghini-Urus"
+        "Porsche-718_Spyder Porsche-718_Spyder"
+        "Porsche-718_Spyder Porsche-718_Spyder"
+        "Mercedes-Benz-GLC63_S BMW-M8_Competition_Coupe"
+        "Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe"
+        "Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe"
+        "Mercedes-Benz-CLA45_S BMW-745Le"
+        "Bentley-Continental_GT Bentley-Continental_GT"
+        "Bentley-Continental_GT Bentley-Continental_GT"
+        "Audi-TT_RS_Roadster BMW-X3_M_Competition"
+        ;
+
+
+        .work--second--1{
+            background-position: center;
+            grid-area:Aston_Martin-DBS;
+        }
+        .work--second--2{
+            grid-area:Audi-S4_Avant;
+        }
+        .work--second--3{
+            grid-area:Bentley-Flying_Spur;
+        }
+        .work--second--4{
+            grid-area:Lamborghini-Urus;
+        }
+        .work--second--5{
+            grid-area:Porsche-718_Spyder;
+        }
+        .work--second--6{
+            grid-area:Porsche-Cayenne_Turbo_Coupe;
+        }
+        .work--second--7{
+            grid-area:Mercedes-Benz-GLC63_S;
+        }
+        .work--second--8{
+            grid-area:Mercedes-Benz-CLA45_S;
+        }
+        .work--second--9{
+            grid-area:BMW-745Le;
+        }
+        .work--second--10{
+            grid-area:Audi-TT_RS_Roadster;
+        }
+        .work--second--11{
+            grid-area:Bentley-Continental_GT;
+        }
+        .work--second--12{
+            grid-area:BMW-M8_Competition_Coupe;
+        }
+        .work--second--13{
+            grid-area:Porsche-Panamera;
+        }
+        .work--second--14{
+            grid-area:BMW-X3_M_Competition;
+        }
+    }
+
+
+    .clients__container{
+        height: 90vh;
+        @include flex(column,space-around);
+        .clients-co-container{
+            height: 100%;
+            .clients__vertical{
+                height: 8vh;
+                margin-top: 3vh;
+            }
+            .clients__title{
+                text-align: center;
+                font-size: 2em;
+                line-height: 1.5em;
+            }
+            .clients__pics__container{
+                margin-top: 4vh;
+                width: 30rem;
+                .clients__pic{
+                    width: 6vw;
+                    height: 6vw;
+                }
+            }
+            .quotes__container{
+                width: 80vw;
+                height: 25vh;
+                @include flex(row,center);
+                margin-top: -4vh;
+            }
+            .names__container{
+                .name{}
+            }
+            .minor-container{
+                width: 80vw;
+                height: 15vh;
+                .featured{
+                    font-size: 1.3em;
+                    @include font-light;
+                }
+                .journals__container{
+                    width: 80vw;
+                    height: 10vh;
+                    @include flex(row,space-around);
+                    align-items: center;
+                    .journal{
+                        // height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .contact--first{
+        width: 100vw;
+        height: 90vh;
+        background-image : url(../img/Porsche-Panamera_Turbo_S_E-Hybrid_Sport_Turismo-2018-1600-ab.jpg);
+        background-size : cover;
+        background-position : center;
+        background-blend-mode: multiply;
+        background-color : rgba(0,0,0,0.2);
+        position: relative;
+        z-index: 10;
+        margin-bottom: 50vh;
+        .contact__titles__container{
+            width: 100%;
+            height: 30%;
+            @include flex(column,flex-end);
+            .contact--first__title--small{
+                color : #fff;
+                @include font-light;
+                text-transform: uppercase;
+                letter-spacing : 10px;
+            }
+            .contact--first__title--large{
+                color : #fff;
+                font-family: $typical;
+                text-transform: uppercase;
+                font-size: 3em;
+                letter-spacing : 10px;
+                margin-top: 2vh;
+            }
+        }
+        
+        .contact-double-container{
+            width: 100%;
+            height: 70%;
+            @include flex(row,space-between);
+            .contact__form__container{
+                height: 100%;
+                width: 50%;
+                @include flex(row,center);
+                .contact__form{
+                    width: 80%;
+                    height: 80%;
+                    @include flex(column,space-around);
+                    .input__container{
+                        width: 90%;
+                        height: 6vh;
+                        position: relative;
+                        display: flex;
+                        &::before,&::after{
+                            content :"";
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            bottom:0;
+                            left:0;
+                            transform :scale(0);
+                            transform-origin: left;
+                            transition: transform 500ms ease-out;
+                        }
+                        &::after{
+                            background-color: #58D68D;
+                        }
+                        &::before{
+                            background-color: #C0392B;
+                        }
+                        &.wrong:before{
+                            transform :scale(1);
+                        }
+                        &.correct:after{
+                            transform : scale(1);
+                        }
+                        .input{
+                            @include font-light;
+                            width: 100%;
+                            height: 50%;
+                            align-self: flex-end;
+                            border : none;
+                            outline: none;
+                            border-bottom : 2px solid #fff;
+                            font-size: 1.2em;
+                            background-color: transparent;
+                            color : #fff;
+                        }
+                        .label{
+                            @include font-light;
+                            position: absolute;
+                            bottom: 7%;
+                            font-size: 1em;
+                            color:#fff;
+                            transform: translateY(0px) scale(1);
+                            transition: transform 700ms ease,
+                            color 500ms ease;
+                            padding-left:2px;
+                            &-wrong{
+                                color:#C0392B;
+                            }
+                            &-correct{
+                                color: #58D68D;
+                            }
+                        }
+                        .label-focus-in{
+                            transform: translateY(-30px) scale(0.8);
+                        }
+                    }
+                    .submit__container{
+                        @include flex(row,center);
+                        width: 60%;
+                        height: 4vh;
+                        .submit{
+                            @include font-light;
+                            font-size: 1.2em;
+                            border : 1px solid color(gold);
+                            background-color: transparent;
+                            color : #fff;
+                            padding: 0.2em 2em;
+                        }
+                    }
+                }
+            }
+            .information__container{
+                height: 100%;
+                width: 50%;
+                @include flex(column,space-around);
+                .info__container{
+                    width: 70%;
+                    @include flex(row,space-between);
+                    .info__svg{
+                        height: 70px;
+                    }
+                    .info__span{
+                        @include font-light;
+                        color: #fff;
+                        text-align: center;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .contact--second{
+        width: 100vw;
+        height: 50vh;
+        position: fixed;
+        z-index:-5;
+        bottom:0;
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+        @include flex(column,center);
+        .contact--second__span{
+            font-family: $typical;
+            text-align: center;
+        }
+        .contact--second__span--light{
+            @include font-light;
+            color : color(greyish);
+            font-size: .8em;
+        }
+        .contact--second__container{
+            .contact__sub-container{
+                height: 100%;
+                width: 22vw;
+                @include flex(column,space-around);
+                box-shadow : 0px 0px 2px -1px #000;
+                border-radius: 5px;
+                .artificial{
+                    @include flex(column,space-around);
+                    width: 22vw;
+                    height: 25vh;
+                    text-align: center;
+                    .span__container--3x{
+                        @include flex(column,space-around);
+                    }
+                    .span__container--2x{
+                        @include flex(column,space-around);
+                    }
+                    .country__container{
+                        @include flex(row,space-between);
+                        flex-direction: row-reverse;
+                        width: 7vw;
+                        width: 80%;
+                        height: 60%;
+                        .contact--second__span--light{
+                            font-size: 1em;
+                        }
+                        .country-flag{
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+            .brand{
+                font-family: $serious;
+                font-weight: 300;
+                text-transform: uppercase;
+                font-size: 2em;
+                letter-spacing:20px;
+            }
+            .social__container{
+                @include flex(row,space-between);
+                width: 25vw;
+                margin-top: 3vh;
+                .social-icon{
+                    height: 30px;
+                }
+            }
+        }
+        .first--footer{
+            width: 100%;
+            height: 30vh;
+            @include flex(row,space-around);
+            padding-top: 5vh;
+        }
+        .second--footer{
+            width: 100%;
+            height: 17vh;
+            @include flex(column,center);
+        }
+        .third--footer{
+            width: 80%;
+            height: 3vh;
+        }
+    }
+}
+

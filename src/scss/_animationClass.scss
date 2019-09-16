@@ -1,0 +1,37 @@
+.card-is-shown{
+    z-index:10;
+}
+// to change the background image of home section
+#home.class0{
+    background-image : url(../img/0.jpg);
+}
+#home.class1{
+    background-image : url(../img/Bentley-Flying_Spur-2020-1600-03.jpg);
+}
+#home.class2{
+    background-image : url(../img/Rolls-Royce-Phantom_Tranquillity-2019-1600-15.jpg);
+}
+
+.quotes.fade-away{
+    display: none;
+}
+.name.fade-away{
+    display: none;
+}
+
+.shown_container{
+    
+}
+
+
+.cannotclick{
+    pointer-events: none;
+}
+
+.btn-hide{
+    display: none;
+}
+.btn-show{
+    display: block;
+}
+

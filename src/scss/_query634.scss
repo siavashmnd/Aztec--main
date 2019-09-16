@@ -1,0 +1,450 @@
+
+@media all and (max-width : 634px){
+    #home{
+        background-image: url(../img/aac93b79.jpg);
+        .left{
+            display: none;
+        }
+        .card{
+            .card__vertical{
+                height: 10vh;
+            }
+            .card--small__title{
+                width: 50vw;
+                text-align: center;
+            }
+            .card--large__title{
+                font-size: 3.5em;
+            }
+            .card__button{}
+        }
+    }
+
+    .about--first{
+        width: 100vw;
+        height: 120vh;
+        .container--first{
+            height: 40vh;
+            .about__title--large{
+                font-size: 2em;
+            }
+        }
+        .container--second{
+            height: 80vh;
+            @include flex(column,center);
+            .second__sub-container{
+                position: relative;
+                left : 0;
+                transform : translateY(0);
+                width: 100%;
+                @include flex(row,space-around);
+                .about__text{
+                    color : #000;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+
+    .about--second{
+        height: 100vh;
+        background-image: url(../img/5dd4bf07.jpg);
+        background-blend-mode: multiply;
+        background-color: rgba(0,0,0,.5);
+        .container--second{
+            width: 70%;
+        }
+    }
+
+
+    .about--third{
+        height: 160vh;
+        @include flex(column,flex-start);
+        .third__container--first{
+            height: 70vh;
+            .third__title{
+                font-size: 2em;
+            }
+        }
+        .third__container--second{
+            height: 90vh;
+            @include flex(column,space-around);
+            .third__sub-container{
+                width: 90vw;
+                height: 25vh;
+                .sub-container__title{
+                    font-size: 1.1em;
+                }
+                .sub-container__text{
+                    font-size: .9em;
+                    text-align: center;
+                }
+                .graphs--container{
+                    height: 18vh;
+                    width: 80vw;
+                    .graph--container{
+                        width: 100%;
+                        .graph__title{
+                            font-size: 0.7em;
+                            height: 4vh;
+                            @include flex(column,center);
+                        }
+                        .graph{
+                            width: 80vw;
+                            .content--95{
+                                &::before{ font-size : 0.8em; }
+                            }
+                            .content--85{
+                                &::before{ font-size : 0.8em; }
+                            }
+                            .content--70{
+                                &::before{ font-size : 0.8em; }
+                            }
+                            .content--65{
+                                &::before{ font-size : 0.8em; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .services--first{
+        height: 150vh;
+        background-image: url(../img/d080caec.jpg);
+        .first__title{
+            font-size: 2.5em;
+            margin-bottom: 10vh;
+        }
+        .first__cards-container{
+            height: 120vh;
+            @include flex(column,space-around);
+            .flip-card{
+                width: 80vw;
+                height: 30vh;
+                &__content{
+                    .flip-card__front{height: 30vh;}
+                    .flip-card__back{height: 30vh;}
+                }
+            }
+        }
+        .carousel__container{
+            display: none;
+        }
+    }
+
+    .services--second{
+        &__text{
+            width: 80vw;
+            font-size: 0.9em;
+        }
+    }
+
+
+    .services--third{
+        height: 140vh;
+        background-image : url(../img/88514661.jpg);
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+        background-color: rgba(0,0,0,.5);
+        padding: 5vh 0;
+        &__container{
+            display: none;
+        }
+        @include flex(column,space-around);
+        .main--cont{
+            width: 90vw;
+            height: 21.5vh;
+            @include flex(row,flex-start);
+            .left--cont{
+                height: 100%;
+                width: 20vw;
+                @include flex(column,space-around);
+                .pix{
+                    height: 5vh;
+                }
+                .vert{
+                    display: block;
+                    width: 1px;
+                    height: 15vh;
+                    background-color : color(gold);
+                }
+            }
+            .right--cont{
+                height: 12vh;
+                width: 60vw;
+                color : #fff;
+                @include flex(column,space-around);
+                align-items: flex-start;
+                .right--cont__title{
+                    font-family: $typical;
+                    text-transform: capitalize;
+                }
+                .right--cont__text{
+                    @include font-light;
+                }
+            }
+        }
+    }
+
+    .work--first{
+        height: 70vh;
+        .work--first__vertical{}
+        .work--first__title--small{}    
+        .work--first__title--large{
+            font-size: 2em;
+        }
+        .work--first__text{
+            font-size: .9em;
+        }
+        .work--first__list{
+            width: 80vw;
+            .work--first__item{}
+        }
+    }
+
+    .work--second{
+        height: 700vh;
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(14,1fr);
+        grid-template-areas:
+        "Aston_Martin-DBS"
+        "Audi-S4_Avant"
+        "Bentley-Flying_Spur"
+        "Porsche-Panamera"
+        "Lamborghini-Urus"
+        "Porsche-718_Spyder"
+        "Mercedes-Benz-GLC63_S"
+        "BMW-M8_Competition_Coupe"
+        "Porsche-Cayenne_Turbo_Coupe"
+        "Mercedes-Benz-CLA45_S"
+        "BMW-745Le"
+        "Audi-TT_RS_Roadster"
+        "Bentley-Continental_GT"
+        "BMW-X3_M_Competition"
+        ;
+
+
+        .work--second--1{
+            background-position: center;
+            &::before{
+                font-size: 1em;
+                height: 30px;
+            }
+        }
+        .work--second--2 {
+            &::before{
+                font-size: 1em;
+                height: 30px;
+            }
+        }
+        .work--second--3 {
+            &::before{
+                font-size: 1em;
+                height: 30px;
+            }
+        }
+        .work--second--4 {
+            &::before{
+            font-size: 1em;
+                height: 30px;
+        }
+        }
+        .work--second--5 {
+            &::before{
+            font-size: 1em;
+                height: 30px;
+        }
+        }
+        .work--second--6 {
+            &::before{
+            font-size: 1em;
+                height: 30px;
+        }
+        }
+        .work--second--7 {
+            &::before{
+            font-size: 1em;
+                height: 30px;
+        }
+        }
+        .work--second--8 {
+            &::before{
+            font-size: 1em;
+                height: 30px;
+        }
+        }
+        .work--second--9 {
+            &::before{
+            font-size: 1em;
+                height: 30px;
+        }
+        }
+        .work--second--10{
+            &::before{
+                font-size: 1em;
+                height: 30px;
+        }
+        }
+        .work--second--11{
+            &::before{
+            font-size: 1em;
+                height: 30px;
+        }
+        }
+        .work--second--12{
+            &::before{
+            font-size: 1em;
+                height: 30px;
+        }
+        }
+        .work--second--13{
+            &::before{
+            font-size: 1em;
+                height: 30px;
+        }
+        }
+        .work--second--14{
+            &::before{
+            font-size: 1em;
+                height: 30px;
+        }
+        }
+    }
+
+
+    .clients__container{
+        height: 150vh;
+        @include flex(column,space-around);
+        .clients-co-container{
+            height: 100%;
+            .clients__vertical{
+                height: 10vh;
+                margin-top: 5vh;
+            }
+            .clients__title{
+                text-align: center;
+                font-size: 2em;
+                line-height: 1.5em;
+            }
+            .clients__pics__container{
+                width: 80vw;
+                margin-bottom: 4vh;
+                .clients__pic{
+                    width: 10vw;
+                    height: 10vw;
+                }
+            }
+            .quotes__container{
+                width: 80vw;
+                height: 25vh;
+                @include flex(row,center);
+            }
+            .names__container{
+                .name{}
+            }
+            .minor-container{
+                width: 80vw;
+                height: 60vh;
+                .featured{
+                    font-size: 1.8em;
+                }
+                .journals__container{
+                    width: 80vw;
+                    height: 50vh;
+                    @include flex(column,space-around);
+                    .journal{
+                        width: 30vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact--first{
+        height: 140vh;
+        background-image : url(../img/e147b659.jpg);
+        background-blend-mode: multiply;
+        background-color : rgba(0,0,0,.4);
+        margin-bottom: 85vh;
+        .contact__titles__container{
+            height: 30vh;
+            @include flex(column,space-around);
+            padding: 5vh 0;
+            .contact--first__title--small{}
+            .contact--first__title--large{
+                width: 90vw;
+                text-align: center;
+            }            
+        }
+        .contact-double-container{
+            @include flex(column,space-around);
+            .contact__form__container{
+                width: 80vw;
+                .contact__form{
+                    width: 100%;
+                    height: 100%;
+                    .input__container{
+                        width: 60vw;
+                        .input{}
+                        .label{}
+                    }
+                }
+            }
+            .information__container{
+                width: 80vw;
+                .info__container{
+                    width: 100%;
+                    justify-content: space-around;
+                    .info__svg{}
+                    .info__span{
+                        width: 40vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact--second{
+        height: 85vh;
+        .contact--second__container{
+            .contact__sub-container{
+                width: 80vw;
+                height: 16vh;
+                @include flex(row,space-around);
+                .artificial{
+                    @include flex(column,space-around);
+                    min-width: 25vw;
+                    height: 12vh; 
+                    .span__container--3x{
+                    }
+                    .span__container--2x{
+                    }
+                    .country__container{
+                        width: 100%;
+                        .country-flag{}
+                    }
+                }
+            }
+            .brand{}
+            .social__container{
+                width: 40vw;
+                .social-icon{}
+            }
+        }
+        .first--footer{
+            height: 70vh;
+            @include flex(column,space-around);
+        }
+        .second--footer{
+            height: 15vh;
+        }
+        .third--footer{
+            height: 3vh;
+        }
+    }
+    
+}

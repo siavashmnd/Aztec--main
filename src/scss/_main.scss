@@ -1,0 +1,1153 @@
+
+// nav
+.header__nav{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 50;
+    width: 100vw;
+    height: 7vh;
+    background-color: #fff;
+    @include flex(row,space-between);
+    box-shadow : 0px 0px 2px -1px #000;
+    // left part nav
+    .nav__list--brand{
+        width: 12.5rem;
+        @include nav-list;
+        justify-content: space-between;
+        margin-left: 1vw;
+        .nav__item{
+            @include flex(row,space-around);
+            height: 100%;
+            font-size: 2em;
+            letter-spacing: 10px;
+            font-weight: 300;
+            .nav__img{
+                height: 5vh;
+            }
+            .nav__link{
+                @include links;
+                font-family: $serious;
+                cursor: pointer;
+            }
+        }
+    }
+    // right part nav
+    .nav__list--navigation{
+        margin-left:auto;
+        width: 50%;
+        @include nav-list;
+        .nav__item{
+            height: 100%;
+            font-family: $typical;
+            font-weight: 300;
+            text-transform: capitalize;
+            @include flex(row,center);
+            cursor: pointer;
+            position: relative;
+            &::after,&::before{
+                content : "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left:0;
+                background-color : color(gold);
+                transform: scaleX(0);
+                transition: 300ms transform ease-in;
+            }
+            &::after{
+                top: 0;
+            }
+            &::before{
+                bottom: 0;
+            }
+            .nav__link{
+                @include links;
+                letter-spacing: 3px;
+                height: 100%;
+                @include flex(column,center);
+            }
+        }
+        .nav__item.active::after,.nav__item.active::before{
+            transform:scaleX(1);
+        }
+    }
+    // menu icon
+    .nav__menu-icon{
+        display: none;
+    }
+}
+
+// home section
+#home{
+    height: 93vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    background-image : url(../img/0.jpg);
+    background-size : cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color : rgba(0,0,0,1);
+    // left part
+    .left{
+        background-color:rgba(0,0,0,.2);
+        width: 6vw;
+        height: 100%;
+        position: relative;
+        @include flex(column,center);
+        border-right : 1px solid color(greyish);
+        &__list{
+            width: 100%;
+            height: 8vh;
+            list-style: none;
+            @include flex(row,center);
+            .left__item{
+                cursor: pointer;
+                font-family: $serious;
+                font-size: 3em;
+                color : color(greyish);
+                width: 100%;
+                text-align: center;
+                transition : 200ms color ease-in;
+                height: 8vh;
+                @include flex(row,center);
+            }
+            .left__behind{
+                position: absolute;
+                cursor: pointer;
+                opacity: 0;
+                font-size:1.5em;
+                text-transform: capitalize;
+                width: 10vw;
+            }
+            .left__item.active-sideBar{
+                color:#fff;
+            }
+            .left__item.active-sideBar-hover{
+                color:#fff;
+            }
+            .stripe{
+                position: relative;
+                &::after{
+                    content : "";
+                    position: absolute;
+                    width: 2px;
+                    height: 80%;
+                    right: 0;
+                    bottom:0;
+                    background-color : color(gold);
+                    transform : scaleY(0);
+                    transition: 200ms transform ease-in;
+                }
+                &.string::after{
+                    transform: scaleY(1);
+                }
+            }
+        }
+    }
+
+    // cards
+    .card{
+        @include flex(column,space-between);
+        position: absolute;
+        width: 30vw;
+        height: 70vh;
+        left:35%;
+        top:15%;
+        transform-style: preserve-3d;
+        .card__vertical{
+            background-color : color(gold);
+            display: block;
+            width: 2px;
+            height: 100px;
+            transform : scaleY(0);
+            transform-origin: top;
+        }
+        .card--small__title{
+            font-family: $typical;
+            color: color(gold);
+            text-transform: uppercase;
+            font-weight: 300;
+            opacity: 0;
+            transform: translateZ(-3px);
+            text-align: center;
+        }
+        .card--large__title{
+            font-family: $serious;
+            text-transform: capitalize;
+            font-size: 5em;
+            text-align: center;
+            color : #fff;
+            opacity: 0;
+            transform: translateZ(5px);
+        }
+        .card__button{
+            background:transparent;
+            font-family: $typical;
+            text-transform: capitalize;
+            font-size: 1em;
+            padding: 1em 3em;
+            border : 0.1px solid color(gold);
+            color : color(gold);
+            font-weight: 300;
+            margin-top: 70px;
+            opacity: 0;
+            cursor: pointer;
+            outline: 1px solid color(gold);
+            outline-offset: -5px;
+            transition: outline-offset 100ms ease;
+            &:hover{
+                outline: 1px solid color(gold);
+                outline-offset: 3px;
+            }
+        }
+    }
+}
+
+
+.about--first{
+    width: 100vw;
+    height: 80vh;
+    background-color: #fff;
+    .container--first{
+        width: 100%;
+        height: 50%;
+        @include flex(column,center);
+        .about__vertical{
+            display: block;
+            height: 50px;
+            width: 2px;
+            background-color : color(gold);
+        }
+        .about__title--small{
+            text-transform: uppercase;
+            font-family: $typical;
+            margin-top: 40px;
+            font-weight: 300;
+            letter-spacing: 5px;
+        }
+        .about__title--large{
+            @extend .about__title--small;
+            font-size: 3em;
+            letter-spacing: 15px;
+            margin-top: 20px;
+        }
+    }
+    .container--second{
+        width: 100%;
+        height: 50%;
+        @include flex(row,space-around);
+        position: relative;
+        .second__sub-container{
+            position: absolute;
+            height: 100%;
+            width: 33vw;
+            @include flex(column, center);
+            .about__svg{
+                height: 120px;
+            }
+            .about__text{
+                display: block;
+                margin-top: 20px;
+                font-family: $typical;
+                text-transform: capitalize;
+            }
+        }
+        .absolute--first{
+            left:7vw;
+            transform : translateY(35vh);
+        }
+        .absolute--second{
+            transform : translateY(35vh);
+        }
+        .absolute--third{
+            right:7vw;
+            transform : translateY(35vh);
+        }
+    }
+}
+
+
+.about--second{
+    width: 100vw;
+    height: 70vh;
+    background-image: url(../img/0dd68c63.jpg);
+    background-size : cover;
+    background-position: center;
+    color:#fff;
+    @include flex(row,center);
+    align-items: flex-start;
+    font-family: $typical;
+    position: relative;
+    z-index:10;
+    .container--second{
+        @include flex(column,space-around);
+        width: 50%;
+        height: 70%;
+        .second__title{
+            text-transform: uppercase;
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: 10px; 
+            text-align: center;
+        }
+        .second__text{
+            line-height: 30px;
+            text-align: center;
+        }
+        .second__btn{
+            font-family: $typical;
+            font-weight: 300;
+            border: 1px solid color(gold);
+            background-color : transparent;
+            color: #fff;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            padding : 0.5em 1em;
+        }
+    }
+}
+
+
+.about--third{
+    width: 100vw;
+    height: 100vh;
+    @include flex(column,center);
+    background-color : #fff;
+    .third__container--first{
+        width: 80%;
+        height: 50%;
+        @include flex(column,center);
+        .third__title{
+            font-family: $typical;
+            font-weight: 300;
+            letter-spacing: 20px;
+            font-size: 2.7em;
+        }
+        .third__span{
+            align-self: flex-start;
+            font-family: $typical;
+            font-weight: 300;
+            margin-top: 5vh;
+        }
+    }
+    .third__container--second{
+        width: 90%;
+        height: 50%;
+        @include flex(row,space-around);
+        .third__sub-container{
+            width: 25vw;
+            height: 40vh;
+            @include flex(column,space-around);
+            box-shadow : 0px 0px 3px -1px color(gold);
+            padding: 0 2vw;
+            border-radius : 2px;
+            .sub-container__title{
+                align-self: flex-start;
+                font-family: $typical;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                width: 100%;
+                text-align: center;
+            }
+            .sub-container__text{ 
+                font-family: $typical;
+                font-weight: 300;   
+                text-align: center;  
+                font-size: .8em; 
+            }
+            .graphs--container{
+                width: 23vw;
+                height: 20vh;
+                @include flex(column,space-between);
+                .graph--container{
+                    width: 23vw;
+                    height: 4vh;
+                    @include flex(column,space-between);
+                    .graph__title{
+                        align-self: flex-start;
+                        font-family: $typical;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-size: 0.7em;
+                    }
+                    .graph{
+                        width: 23vw;
+                        height: 0.3vh;
+                        background-color : color(lightGrey);
+                        .content--95{
+                            @include graph-content;
+                            width: 95%;
+                            &::before{
+                                content : "95%";
+                                @include graph_before;
+                                font-size: .8em;
+                            }
+                        }
+                        .content--95.show-before::before{
+                            opacity: 1;
+                        }
+                        .content--85{
+                            @include graph-content;
+                            width: 85%;
+                            &::before{
+                                content : "85%";
+                                @include graph_before;
+                                font-size: .8em;
+                            }
+                        }
+                        .content--85.show-before::before{
+                            opacity: 1;
+                        }
+                        .content--70{
+                            @include graph-content; 
+                            width: 70%;
+                            &::before{
+                                content : "70%";
+                                @include graph_before;
+                                font-size: .8em;
+                            } 
+                        }
+                        .content--70.show-before::before{
+                            opacity: 1;
+                        }
+                        .content--65{
+                            @include graph-content;
+                            width: 65%;
+                            &::before{
+                                content : "65%";
+                                @include graph_before;
+                                font-size: .8em;
+                            }
+                        }
+                        .content--65.show-before::before{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.services--first{
+    width: 100vw;
+    height: 70vh;
+    background-image: url(../img/Aston_Martin-DBS_Superleggera_OHMSS_Edition-2019-1600-0a.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-color : rgba(0,0,0,.5);
+    background-blend-mode: multiply;
+    @include flex(column,center);
+    .first__title{
+        color : #fff;
+        @include font-light;
+        font-size: 3em;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    .first__cards-container{
+        width: 100%;
+        height: 50vh;
+        @include flex(row,space-around);
+        .flip-card{
+            width: 28vw;
+            height: 40vh;
+            &__content{
+                text-align: center;
+                position: relative;
+                transform-style: preserve-3d;
+                .flip-card__front{
+                    @include flip-card-sides;
+                    height: 40vh;
+                    &::before{
+                        content:"";
+                        position: absolute;
+                        top:1em;
+                        left: 1em;
+                        right: 1em;
+                        bottom: 1em;
+                        border: 2px solid color(gold);
+                        transform : translateZ(3rem);
+                    }
+                    .flip-card__title{
+                        transform : translateZ(5rem);
+                        font-family: $typical;
+                        text-transform: uppercase;
+                    }
+                    .flip-card__subtitle{
+                        transform:translateZ(3rem);
+                        font-family: $typical;
+                    }
+                }
+                .flip-card__back{
+                    @include flip-card-sides;
+                    transform : rotateY(180deg);
+                    height: 40vh;
+                    .flip-card__back__content{
+                        transform: translateZ(5rem);
+                        font-family: $typical;
+                    }
+                }
+            }
+        }
+    }
+    .carousel__container{
+        display: none;
+    }
+}
+
+.services--second{
+    width: 100vw;
+    height: 40vh;
+    background-color: #000;
+    color: #fff;
+    @include flex(column,center);
+    box-shadow : 0px 0px 0px 2px color(gold) inset;
+    outline: 1px solid color(gold);
+    outline-offset: -6px;
+    &__title{
+        font-family: $typical;
+        letter-spacing: 5px;
+    }
+    &__text{
+        @include font-light;
+        width: 50vw;
+        text-align: center;
+        margin-top: 2vh;
+    }
+    &__button{
+        @include font-light;
+        color :#fff;
+        background-color : transparent;
+        border : 1px solid color(gold);
+        font-size: 1.2em;
+        padding: .3em 1.2em;
+        margin-top: 5vh;
+        text-transform: capitalize;
+    }
+}
+
+
+.services--third{
+    width: 100vw;
+    height: 85vh;
+    background-image: url(../img/Mercedes-Benz-GLC63_S_AMG_Coupe-2020-1600-5b.jpg);
+    background-size : cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color : rgba(0,0,0,0.2);
+    @include flex(row,flex-start);
+    &__container{
+        height: 85vh;
+        width: 60vw;
+        @include flex(row,center);
+        position: relative;
+        .services--third__wheel{
+            height: 350px;
+        }
+        .services--third__circle{
+            position: absolute;
+            height: 500px;
+            opacity: 0.5;
+        }
+        .inside__circle{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color : color(lightGrey);
+            clip-path: circle(130px);
+            -webkit-clip-path: circle(130px);
+            z-index : 5;
+            @include flex(row,center);
+            &__container{
+                position: absolute;
+                text-align: center;
+                width: 200px;
+                height: 200px;
+                @include flex(column,space-around);
+                opacity:0;
+                .inside__circle__title{
+                    font-family: $typical;
+                }
+                .inside__circle__text{
+                    @include font-light;
+                }
+            }
+        }
+        .wheel__svg{
+            position: absolute;
+            height: 50px;
+            cursor: pointer;
+        }
+    }
+    .main--cont{
+        display: none;
+    }
+}
+
+
+.work--first{
+    width: 100vw;
+    height: 60vh;
+    @include flex(column,center);
+    background-color : #fff;
+    &__vertical{
+        height: 50px;
+        width: 2px;
+        background-color: color(gold);
+        display: block;
+    }
+    &__title--small{ 
+        font-family : $typical;
+        letter-spacing : 3px;
+        margin-top: 5vh;
+    }
+    &__title--large{ 
+        font-family : $typical;
+        letter-spacing : 10px;
+        font-size: 3em;
+        margin: 3vh 0;
+    }
+    &__text{
+        @include font-light;
+        width: 50%;
+        text-align: center;
+    }
+    &__list{
+        margin-top: 10vh;
+        list-style: none;
+        width: 50%;
+        @include flex(row,space-between);
+        .work--first__item{
+            font-family : $typical;
+            cursor: pointer;
+            height: 5vh;
+            @include flex(row,center);
+            position: relative;
+            &::before,&::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color : color(gold);
+                left:0px;
+                transform : scaleX(0);
+                transition : transform 300ms ease-out;
+            }
+            &::before{
+                top:0;
+            }
+            &::after{
+                bottom: 0;
+            }
+            &.extend::after,&.extend::before{
+                transform : scaleX(1);
+            }
+        }
+    }
+}
+
+
+.work--second{
+    width: 100vw;
+    height: 300vh;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    // 100/3vw
+    grid-template-rows: repeat(12,1fr);
+    // 25vh
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    grid-template-areas:
+    
+    
+    "Aston_Martin-DBS Aston_Martin-DBS Audi-S4_Avant"
+    "Aston_Martin-DBS Aston_Martin-DBS Audi-S4_Avant"
+    "Bentley-Flying_Spur Bentley-Flying_Spur Porsche-Panamera"
+    "Bentley-Flying_Spur Bentley-Flying_Spur Porsche-Panamera"
+    "Lamborghini-Urus Porsche-718_Spyder Mercedes-Benz-GLC63_S"
+    "Lamborghini-Urus Porsche-718_Spyder Mercedes-Benz-GLC63_S"                                               
+    "BMW-M8_Competition_Coupe Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe"
+    "BMW-M8_Competition_Coupe Porsche-Cayenne_Turbo_Coupe Porsche-Cayenne_Turbo_Coupe"
+    "Mercedes-Benz-CLA45_S BMW-745Le Audi-TT_RS_Roadster"
+    "Mercedes-Benz-CLA45_S BMW-745Le Audi-TT_RS_Roadster"
+    "Bentley-Continental_GT Bentley-Continental_GT BMW-X3_M_Competition"
+    "Bentley-Continental_GT Bentley-Continental_GT BMW-X3_M_Competition";
+
+    &--1{
+        background-image:url(../img/Aston_Martin-DBS_Superleggera_White_Stone-2019-1280-05.jpg);
+        @include grid-pic;
+        grid-area:Aston_Martin-DBS;
+        &::before{
+            content : "2019 Aston Martin DBS Superleggera WhiteStone";
+            @include grid-pic-before;
+        }
+        background-position-y: 470px;
+        &:hover{
+            background-image : url(../img/Aston_Martin-DBS_Superleggera_White_Stone-2019-1280-75.jpg);
+            background-position : center;
+        }
+    }
+    &--2{
+        background-image:url(../img/Audi-S4_Avant_TDI-2020-800-05.jpg);
+        @include grid-pic;
+        grid-area:Audi-S4_Avant;
+        &::before{
+            content : "2020 Audi S4 Avant TDI";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/Audi-S4_Avant_TDI-2020-800-1a.jpg);
+        }
+    }
+    &--3{
+        background-image:url(../img/Bentley-Flying_Spur_First_Edition-2020-1280-03.jpg);
+        @include grid-pic;
+        grid-area:Bentley-Flying_Spur;
+        &::before{
+            content : "2020 Bentley FlyingSpur FirstEdition";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/Bentley-Flying_Spur_First_Edition-2020-1280-09.jpg);
+        }
+    }
+    &--4{
+        background-image:url(../img/Lamborghini-Urus-2019-800-28.jpg);
+        @include grid-pic;
+        grid-area:Lamborghini-Urus;
+        &::before{
+            content : "2019 Lamborghini Urus";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/Lamborghini-Urus-2019-800-be.jpg);
+        }
+    }
+    &--5{
+        background-image:url(../img/Porsche-718_Spyder-2020-800-0e.jpg);
+        @include grid-pic;
+        grid-area:Porsche-718_Spyder;
+        &::before{
+            content : "2020 Porsche 718 Spyder";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/Porsche-718_Spyder-2020-800-a1.jpg);
+        }
+    }
+    &--6{
+        background-image:url(../img/Porsche-Cayenne_Turbo_Coupe-2020-1280-34.jpg);
+        @include grid-pic;
+        grid-area:Porsche-Cayenne_Turbo_Coupe;
+        &::before{
+            content : "2020 Porsche Cayenne Turbo Coupe";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/Porsche-Cayenne_Turbo_Coupe-2020-1280-60.jpg);
+        }
+    }
+    &--7{
+        background-image:url(../img/Mercedes-Benz-GLC63_S_AMG_Coupe-2020-800-21.jpg);
+        @include grid-pic;
+        grid-area:Mercedes-Benz-GLC63_S;
+        &::before{
+            content : "2020 MercedesBenz GLC63S AMG Coupe";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/Mercedes-Benz-GLC63_S_AMG_Coupe-2020-800-57.jpg);
+        }
+    }
+    &--8{
+        background-image:url(../img/Mercedes-Benz-CLA45_S_AMG_4Matic_Shooting_Brake-2020-800-12.jpg);
+        @include grid-pic;
+        grid-area:Mercedes-Benz-CLA45_S;
+        &::before{
+            content : "2020 MercedesBenz CLA45S AMG 4Matic ShootingBrake";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/Mercedes-Benz-CLA45_S_AMG_4Matic_Shooting_Brake-2020-800-11.jpg);
+        }
+    }
+    &--9{
+        background-image:url(../img/BMW-745Le-2020-800-03.jpg);
+        @include grid-pic;
+        grid-area:BMW-745Le;
+        &::before{
+            content : "2020 BMW 745Le";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/BMW-745Le-2020-800-62.jpg);
+        }
+    }
+    &--10{
+        background-image:url(../img/Audi-TT_RS_Roadster-2020-800-03.jpg);
+        @include grid-pic;
+        grid-area:Audi-TT_RS_Roadster;
+        &::before{
+            content : "2020 Audi TT RS Roadster";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/Audi-TT_RS_Roadster-2020-800-11.jpg);
+        }
+    }
+    &--11{
+        background-image:url(../img/Bentley-Continental_GT_V8-2020-1280-0b.jpg);
+        @include grid-pic;
+        grid-area:Bentley-Continental_GT;
+        &::before{
+            content : "2020 Bentley Continental GT V8";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/Bentley-Continental_GT_V8-2020-1280-54.jpg);
+        }
+    }
+    &--12{
+        background-image:url(../img/BMW-M8_Competition_Coupe-2020-800-0d.jpg);
+        @include grid-pic;
+        grid-area:BMW-M8_Competition_Coupe;
+        &::before{
+            content : "2020 BMW M8 Competition Coupe";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/BMW-M8_Competition_Coupe-2020-800-1a.jpg);
+        }
+    }
+    &--13{
+        background-image : url(../img/Porsche-Panamera_GTS_Sport_Turismo-2019-800-5e.jpg);
+        @include grid-pic;
+        grid-area:Porsche-Panamera;
+        &::before{
+            content : "2019 Porsche Panamera GTS SportTurismo";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/Porsche-Panamera_GTS_Sport_Turismo-2019-800-a9.jpg);
+        }
+    }
+    &--14{
+        background-image : url(../img/BMW-X3_M_Competition-2020-800-2f.jpg);
+        @include grid-pic;
+        grid-area:BMW-X3_M_Competition;
+        &::before{
+            content : "2020 BMW X3 M Competition";
+            @include grid-pic-before;
+        }
+        &:hover{
+            background-image : url(../img/BMW-X3_M_Competition-2020-800-89.jpg);
+        }
+    }
+}
+
+
+.clients__container{
+    width: 100vw;
+    height: 90vh;
+    font-family: $typical;
+    @include flex(column,center);
+    background-color : #fff;
+    .clients-co-container{
+        width: 100%;
+        height: 80vh;
+        @include flex(column,space-around);
+        .clients__vertical{
+            width: 2px;
+            height: 50px;
+            background-color : color(gold);
+        }
+        .clients__title{
+            font-size: 2.5em;
+            letter-spacing: 15px;
+        }
+        .clients__pics__container{
+            width: 50vw;
+            @include flex(row,space-between);
+            .clients__pic{
+                height: 70px;
+                width: 70px;
+                object-fit: cover;
+                object-position: center;
+                border-radius : 50%;
+                cursor: pointer;
+                filter: grayscale(1);
+            }
+            .clients__pic:nth-child(1){
+                filter: grayscale(0);
+            }
+        }
+        .quotes__container{
+            width: 70vw;
+            height: 15vh;
+            @include flex(row,center);
+            .quotes{
+                text-align: center;
+            }
+        }
+        .names__container{
+            .name{
+                position: relative;
+                padding : 5px 0px;
+                &::before,&::after{
+                    content : "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color : color(gold);
+                    left:0;
+                }
+                &::before{
+                    top:0;
+                }
+                &::after{
+                    bottom:0;
+                }
+            }
+        }
+        .minor-container{
+            @include flex(column,space-between);
+            height: 10vh;
+            margin-top: 10vh;
+            .featured{
+                text-transform: capitalize;
+            }
+            .journals__container{
+            width: 80vw;
+            @include flex(row,space-around);
+            .journal{}
+        }
+        }
+    }
+}
+
+.contact--first{
+    width: 100vw;
+    height: 90vh;
+    background-image : url(../img/Porsche-Panamera_Turbo_S_E-Hybrid_Sport_Turismo-2018-1600-ab.jpg);
+    background-size : cover;
+    background-position : center;
+    background-blend-mode: multiply;
+    background-color : rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 10;
+    margin-bottom: 50vh;
+    .contact__titles__container{
+        width: 100%;
+        height: 30%;
+        @include flex(column,flex-end);
+        .contact--first__title--small{
+            color : #fff;
+            @include font-light;
+            text-transform: uppercase;
+            letter-spacing : 10px;
+        }
+        .contact--first__title--large{
+            color : #fff;
+            font-family: $typical;
+            text-transform: uppercase;
+            font-size: 3em;
+            letter-spacing : 10px;
+            margin-top: 2vh;
+        }
+    }
+    .contact-double-container{
+        width: 100%;
+        height: 70%;
+        @include flex(row,space-between);
+        .contact__form__container{
+            height: 100%;
+            width: 50%;
+            @include flex(row,center);
+            .contact__form{
+                width: 80%;
+                height: 80%;
+                @include flex(column,space-around);
+                .input__container{
+                    width: 80%;
+                    height: 6vh;
+                    position: relative;
+                    display: flex;
+                    &::before,&::after{
+                        content :"";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        bottom:0;
+                        left:0;
+                        transform :scale(0);
+                        transform-origin: left;
+                        transition: transform 500ms ease-out;
+                    }
+                    &::after{
+                        background-color: #58D68D;
+                    }
+                    &::before{
+                        background-color: #C0392B;
+                    }
+                    &.wrong:before{
+                        transform :scale(1);
+                    }
+                    &.correct:after{
+                        transform : scale(1);
+                    }
+                    .input{
+                        @include font-light;
+                        width: 100%;
+                        height: 50%;
+                        align-self: flex-end;
+                        border : none;
+                        outline: none;
+                        border-bottom : 2px solid #fff;
+                        font-size: 1.2em;
+                        background-color: transparent;
+                        color : #fff;
+                    }
+                    .label{
+                        @include font-light;
+                        position: absolute;
+                        bottom: 7%;
+                        font-size: 1em;
+                        color:#fff;
+                        transform: translateY(0px) scale(1);
+                        transition: transform 700ms ease,
+                        color 500ms ease;
+                        padding-left:2px;
+                        &-wrong{
+                            color:#C0392B;
+                        }
+                        &-correct{
+                            color: #58D68D;
+                        }
+                    }
+                    .label-focus-in{
+                        transform: translateY(-30px) scale(0.8);
+                    }
+                }
+                .submit__container{
+                    @include flex(row,center);
+                    width: 60%;
+                    height: 4vh;
+                    .submit{
+                        @include font-light;
+                        font-size: 1.2em;
+                        border : 1px solid color(gold);
+                        background-color: transparent;
+                        color : #fff;
+                        padding: 0.2em 2em;
+                    }
+                }
+            }
+        }
+        .information__container{
+            height: 100%;
+            width: 50%;
+            @include flex(column,space-around);
+            .info__container{
+                width: 70%;
+                @include flex(row,space-between);
+                .info__svg{
+                    height: 70px;
+                }
+                .info__span{
+                    @include font-light;
+                    color: #fff;
+                    width: 50%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+.contact--second{
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    z-index:-5;
+    bottom:0;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    @include flex(column,center);
+    .contact--second__span{
+        font-family: $typical;
+        text-align: center;
+    }
+    .contact--second__span--light{
+        @include font-light;
+        color : color(greyish);
+        text-align: center;
+        font-size: .8em;
+    }
+    .contact--second__container{
+        .contact__sub-container{
+            height: 100%;
+            width: 20vw;
+            @include flex(column,space-around);
+            box-shadow : 0px 0px 2px -1px #000;
+            border-radius: 5px;
+            padding : 3vh 0;
+            .artificial{
+                height: 50%;
+                width: 100%;
+                @include flex(column,space-around);
+                .span__container--3x{
+                    @include flex(column,space-around);
+                }
+                .span__container--2x{
+                    @include flex(column,space-around);
+                }
+                .country__container{
+                    @include flex(row,space-between);
+                    width: 15vw;
+                    margin-top: 1vh;
+                    .contact--second__span--light{
+                        font-size: 1em;
+                    }
+                    .country-flag{
+                        height: 20px;
+                    }
+                }
+            }
+        }
+        .brand{
+            font-family: $serious;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 2em;
+            letter-spacing:20px;
+        }
+        .social__container{
+            @include flex(row,space-between);
+            width: 20vw;
+            margin-top: 3vh;
+            .social-icon{
+                height: 30px;
+            }
+        }
+    }
+    .first--footer{
+        width: 100%;
+        height: 30vh;
+        @include flex(row,space-around);
+        padding-top: 5vh;
+    }
+    .second--footer{
+        width: 100%;
+        height: 17vh;
+        @include flex(column,center);
+    }
+    .third--footer{
+        width: 80%;
+        height: 3vh;
+    }
+}

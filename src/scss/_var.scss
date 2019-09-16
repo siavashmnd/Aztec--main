@@ -1,0 +1,13 @@
+$colorPallette :(
+    greyish : #7C7C7C,
+    gold: #DB9F00,
+    lightGrey : #DADADA  
+);
+
+@function color($colorName){
+    @return map-get($colorPallette,$colorName);
+}
+
+$serious : 'Cormorant', serif;
+$typical : 'Quicksand', sans-serif;
+
